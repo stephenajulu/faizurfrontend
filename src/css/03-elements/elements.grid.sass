@@ -1,0 +1,11 @@
+.container
+  max-width: var(--container)
+  margin: 0 auto
+  padding-left: var(--grid-space-onMobile)
+  padding-right: var(--grid-space-onMobile)
+  @include media('>=mobile')
+    padding-left: var(--grid-space-onTablet)
+    padding-right: var(--grid-space-onTablet)
+  @include media('>=desktop')
+    padding-left: var(--grid-space-onDesktop)
+    padding-right: var(--grid-space-onDesktop)

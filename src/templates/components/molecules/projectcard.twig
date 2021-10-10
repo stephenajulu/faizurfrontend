@@ -1,0 +1,14 @@
+<div class="workShowcase__item workShowcase-{{project.id}}">
+    <a href="{{project.slug}}" class="workShowcase__preview">
+        <picture class="workShowcase-image">
+            <source media="(max-width: 992px)" srcset="{{project.image1x}}">
+            <img src="{{project.image2x}}"  alt="{{project.title}}, Faizur" class="lazy">
+        </picture>
+    </a>
+    <div class="workShowcase__caption">
+        <h5 class="h5">
+            <strong class="fontWeight-medium">{{project.title}}</strong>
+            <span class="meta fontWeight-regular">{{project.text}}</span>
+        </h5>
+    </div>
+</div>

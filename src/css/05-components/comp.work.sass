@@ -1,0 +1,100 @@
+.workShowcase
+  position: relative
+  &__container
+    @extend .container
+    @include media('<=mobile')
+      padding: 0 4px
+  &__split
+    display: flex
+    justify-content: space-between
+    &-cols
+      flex: 1
+      position: relative
+
+  &__item
+    display: block
+    position: relative
+    will-change: transform
+    transition: transform .5s cubic-bezier(.455,.03,.515,.955)
+    &:hover
+      transform: scale3d(.95,.95,1)
+      img
+        transform: scale3d(1.15,1.15,1)
+
+  .--right
+    margin-top: -40px
+    @include media('>=tablet')
+      margin-top: -140px
+
+
+
+  &__preview
+    position: relative
+    display: block
+    overflow: hidden
+    padding-bottom: 123.593%
+    transition: transform .4s
+    margin: 8px 4px 8px 4px
+    will-change: transform
+    transform: scaleX(1)
+    background-color: var(--color-white-200)
+    @include media('>=tablet')
+      margin: 32px 16px
+
+    picture
+      display: block
+      transition: transform .4s
+
+    img
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      width: 100%
+      will-change: transform
+      transition: transform .5s cubic-bezier(.455,.03,.515,.955)
+
+  &__caption
+    text-align: center
+    margin-bottom: 24px
+    width: 100%
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    @include media('>=tablet')
+      padding: 0 40px
+      margin-bottom: 80px
+    .h5
+      font-size: 1.125rem
+      font-weight: var(--fontWeightRegular)
+      position: relative
+      @media (max-width: 599.98px)
+        font-size: 1rem
+
+      strong
+        @include media('>=tablet')
+          &:after
+            display: inline-block
+            position: relative
+            top: -5px
+            margin-left: .5rem
+            margin-right: .3rem
+            width: 20px
+            height: 1px
+            background-color: var(--color-black-200)
+            content: ""
+
+    .meta
+      font-size: var(--WorkShowcase-fontSize)
+      @include media('<=tablet')
+        display: none
+
+
+
+  .btn-viewmore
+    margin: 0 auto
+    display: table
+
+
+

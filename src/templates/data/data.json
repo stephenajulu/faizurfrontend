@@ -1,0 +1,92 @@
+{
+  "projects": [{
+    "id": "1",
+    "title": "Vencortex",
+    "text": "We helped Vencortex in redesigning a whole new customer experience.",
+    "image1x": "https://cdn.cuberto.com/cb/img/sigma/card.jpg",
+    "image2x": "https://cdn.cuberto.com/cb/img/sigma/card@2x.jpg",
+    "alt": "faizur",
+    "slug": "https://dribbble.com/fazurrehman/projects/2041240-Vencortex"
+  },
+    {
+      "id": "2",
+      "title": "Avo Rewards",
+      "text": "We designed a whole new mobile app to enhance the user experience.",
+      "image1x": "https://cdn.cuberto.com/cb/img/sigma/card.jpg",
+      "image2x": "https://cdn.cuberto.com/cb/img/sigma/card@2x.jpg",
+      "alt": "faizur",
+      "slug": "https://dribbble.com/fazurrehman/projects/2041240-Vencortex"
+    },
+    {
+      "id": "3",
+      "title": "Faizur",
+      "text": "Creating a new visual language for my personal brand.",
+      "image1x": "https://cdn.cuberto.com/cb/img/sigma/card.jpg",
+      "image2x": "https://cdn.cuberto.com/cb/img/sigma/card@2x.jpg",
+      "alt": "faizur",
+      "slug": "https://dribbble.com/fazurrehman/projects/2041240-Vencortex"
+    },
+    {
+      "id": "4",
+      "title": "Twiddle App",
+      "text": "We helped Twiddle App rebrand and create a more fun and engaging app experience.",
+      "image1x": "https://cdn.cuberto.com/cb/img/sigma/card.jpg",
+      "image2x": "https://cdn.cuberto.com/cb/img/sigma/card@2x.jpg",
+      "alt": "faizur",
+      "slug": "https://dribbble.com/fazurrehman/projects/2041240-Vencortex"
+    },
+    {
+      "id": "5",
+      "title": "The Wanderful",
+      "text": "We have worked closely with The Wanderful for over 2 years helping develop their entire brand and online presence.",
+      "image1x": "https://cdn.cuberto.com/cb/img/sigma/card.jpg",
+      "image2x": "https://cdn.cuberto.com/cb/img/sigma/card@2x.jpg",
+      "alt": "faizur",
+      "slug": "https://dribbble.com/fazurrehman/projects/2041240-Vencortex"
+    },
+    {
+      "id": "6",
+      "title": "MoneyMore",
+      "text": "We delivered a newly designed app for IOs & Android.",
+      "image1x": "https://cdn.cuberto.com/cb/img/sigma/card.jpg",
+      "image2x": "https://cdn.cuberto.com/cb/img/sigma/card@2x.jpg",
+      "alt": "faizur",
+      "slug": "https://dribbble.com/fazurrehman/projects/2041240-Vencortex"
+    }
+  ],
+
+  "socialmedia": [{
+    "platform": "Instagram",
+    "slug": "https://www.instagram.com/fazurrehman/"
+  },
+    {
+      "platform": "Youtube",
+      "slug": "https://www.youtube.com/channel/UCQR7vuOpqGq1MmY4HHvlTyw?sub_confirmation=1"
+    },
+    {
+      "platform": "Dribbble",
+      "slug": "https://dribbble.com/fazurrehman"
+    },
+    {
+      "platform": "Linkedin",
+      "slug": "https://www.linkedin.com/in/fazurrehman/"
+    },
+    {
+      "platform": "Medium",
+      "slug": "https://medium.com/@fazurrehman"
+    },
+    {
+      "platform": "Behance",
+      "slug": "https://www.behance.net/fazurrehman"
+    },
+    {
+      "platform": "Twitter",
+      "slug": "https://twitter.com/fazurrehman"
+    },
+    {
+      "platform": "Codepen",
+      "slug": "https://codepen.io/fazurrehman"
+    }
+  ]
+
+}

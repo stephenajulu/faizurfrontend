@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="eng">
+
+<head>
+  {% include "../components/global/meta.twig" %}
+</head>
+
+<body class="{% if pageClass is defined %}{{ pageClass }}{% else %}{% endif %}" style="" data-scroll-container>
+  {% include "../components/global/menu.twig" %}
+  <main role="main">
+    {% block content %}
+    {% endblock %}
+  </main>
+  {{ block('included_scripts') }}
+</body>
+
+</html>

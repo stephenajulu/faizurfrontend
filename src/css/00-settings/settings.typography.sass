@@ -1,0 +1,94 @@
+\:root
+  --scale: 1
+@media (min-width: 1600px)
+  \:root
+    --scale: 1.1
+
+@media (min-width: 1080px) and (max-width: 1279.98px)
+  \:root
+    --scale: 0.9
+
+@media (min-width: 600px) and (max-width: 1079.98px)
+  \:root
+    --scale: 0.8
+
+@media (max-width: 599.98px)
+  \:root
+    --scale: 0.7
+
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6
+  font-family: var(--fontFamilyHeading)
+  color: #000000
+  line-height: 1.3
+  font-weight: var(--fontWeightRegular)
+
+
+
+h1, .h1
+  font-size: calc(96px * var(--scale))
+  line-height: 1
+  font-weight: var(--fontWeightBold)
+
+h2, .h2
+  font-size: calc(72px * var(--scale))
+  letter-spacing: -1px
+
+h3, .h3
+  font-size: calc(56px * var(--scale))
+  @media (max-width: 599.98px)
+    font-size: calc(48px * var(--scale))
+
+h4, .h4
+  font-size: calc(48px * var(--scale))
+  @media (max-width: 599.98px)
+    font-size: calc(48px * var(--scale))
+    letter-spacing: 0.5px
+
+h5, .h5
+  font-size: calc(32px * var(--scale))
+  letter-spacing: 0.5px
+
+h6, .h6
+  font-size: 22px
+  letter-spacing: 0.5px
+  @media (max-width: 599.98px)
+    font-size: calc(24px * var(--scale))
+
+p
+  margin-bottom: 8px
+
+.p1
+  @extend .h3
+
+.p2
+  @extend .h5
+  font-weight: var(--fontWeightRegular)
+
+.p3
+  @extend .h6
+  font-weight: var(--fontWeightRegular)
+
+
+
+
+// classes
+.meta
+  font-size: 1rem
+  line-height: 1.3
+  font-weight: var(--fontWeightBold)
+.micro
+  font-size: 0.813rem
+  line-height: 1.2
+  font-weight: var(--fontWeightMedium)
+  letter-spacing: 0.3px
+
+// fontweight
+.fontWeight-regular
+  font-weight: var(--fontWeightRegular)!important
+.fontWeight-medium
+  font-weight: var(--fontWeightMedium)!important
+.fontWeight-bold
+  font-weight: var(--fontWeightBold)!important
+

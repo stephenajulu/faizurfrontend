@@ -1,0 +1,36 @@
+//.section-services
+.services
+  position: relative
+  &-wrapper
+    display: flex
+    flex-wrap: wrap
+    margin-left: -20px
+    margin-right: -20px
+  &__cols
+    flex: 1 0 50%
+    padding: 0 20px
+    @include media('>=mobile')
+      flex: 1
+
+
+  .service-icon
+    margin-bottom: 16px
+    height: 80px
+
+
+  .service-list
+    .headline
+      padding: 0
+      h6
+        font-size: 1rem
+        text-transform: uppercase
+        font-weight: var(--fontWeightBold)
+        border-bottom: 3px solid var(--color-white-400)
+        padding: 12px 0
+
+    li
+      padding: 12px 0
+      border-bottom: 1px solid var(--color-white-300)
+      font-size: 1rem
+      @include media('<=mobile')
+        padding: 6px 0

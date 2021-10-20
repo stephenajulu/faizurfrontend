@@ -1,11 +1,8 @@
-.section-testimonials
+.c-testimonial-content
   position: relative
-  --cTestimonialAvatar: 120px
-  //background-color: blue
-  .section-header
-    margin-bottom: calc(var(--columnPaddingNormal) * 4 )
-    @include media('<=mobile')
-      margin-bottom: calc(var(--columnPaddingNormal) * 2 )
+  max-width: 1920px
+  margin: 0 auto
+
 
 .cTestimonials
   position: relative
@@ -28,7 +25,8 @@
   height: 100%
   background-color: transparent
   pointer-events: none
-  z-index: 0
+  //overflow: hidden
+  z-index: -1
   &__inner
     position: absolute
     top: 50%
@@ -55,16 +53,19 @@
 .cTestimonials__carousel
   .cTestimonial-words
     overflow: hidden
-    max-width: 800px
+    max-width: 880px
+    padding-right: 80px
     transition: transform .8s cubic-bezier(.165,.84,.44,1),opacity .5s cubic-bezier(.895,.03,.685,.22)
+    @include media('<=small')
+      padding-right: 0
     &-content
       font-size: 1.75rem
-      margin-bottom: 40px
       transition: transform .8s cubic-bezier(.165,.84,.44,1),opacity .5s cubic-bezier(.895,.03,.685,.22)
       opacity: 0
       transform: skewY(8deg)
       will-change: transform, opacity
-      @include media('<=mobile')
+      font-weight: var(--fontWeightRegular)
+      @include media('<=small')
         font-size: 1.125rem
 
   .slick-active .cTestimonial-words-content
@@ -75,9 +76,11 @@
     position: relative
     opacity: 0
     transition: opacity .5s cubic-bezier(.895,.03,.685,.22)
+    margin-top: var(--rowGapXLarge)
+    margin-bottom: var(--rowGapXLarge)
     &-role
       font-size: 1.125rem
-      font-weight: var(--fontWeightMedium)
+      font-weight: var(--fontWeightBold)
       text-transform: uppercase
       margin-bottom: 8px
     &-brand
@@ -88,6 +91,8 @@
   .slick-active .cTestimonial__client
       opacity: 1
       transform: skewY(0)
+
+
 
 
 // slider avatars
@@ -222,7 +227,7 @@
       align-items: center
       justify-content: center
       transition: all 200ms cubic-bezier(.84, 0, .08, .99)
-      @include media('<=mobile')
+      @include media('<=small')
         background-color: var(--color-white-100)
       &:hover
         transform: scale(1.1)

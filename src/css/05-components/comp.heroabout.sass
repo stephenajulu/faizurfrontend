@@ -1,0 +1,198 @@
+.c-heroAbout
+  position: relative
+  will-change: transform
+  overflow: hidden
+  p
+    margin: 0
+
+  .cTestimonials-bg
+    bottom: -50%
+    top: unset
+  .cTestimonials-bg__inner
+    bottom: 0
+    right: 10%
+  .cTestimonials-bg__inner-circle
+    background-color: var(--color-black)
+
+//.c-heroAboutImage-wrapper
+.c-heroAboutWrapper
+  padding-top: 108px
+  @include media('>=medium')
+    padding-top: 128px
+
+
+.c-heroAboutWrapper-content
+  width: 100%
+
+.c-heroAbout-container.paddingHack-onMobile
+  @include media('<=medium')
+    padding: 0
+
+
+.c-heroAboutImage-wrapper
+  width: calc(100% + 6.25vw)
+  margin-left: -5vw
+
+.c-heroAboutImage-wrapper-inner
+  position: relative
+
+  &:before
+    content: ''
+    padding-bottom: 81.7%
+    display: block
+
+.heroAboutImage-media
+  position: absolute
+  top: 0
+  left: 0
+  width: 150%
+  height: 100%
+  overflow: hidden
+
+.heroAboutImage-media-image
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+.c-heroAboutContent
+  box-sizing: border-box
+  position: relative
+  margin-left: auto
+  margin-right: auto
+  padding: 0
+  display: flex
+  flex-direction: column-reverse
+  &:after
+    display: table
+    clear: both
+  @include media('>=medium')
+    display: block
+
+
+
+.c-heroAbout-left
+  margin: 0 var(--grid-space-onMobile) 0  var(--grid-space-onMobile)
+  position: relative
+  top: -40px
+  padding: 0 5%
+  @include media('>=medium')
+    position: absolute
+    display: flex
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    flex-wrap: wrap
+    flex-grow: 0
+    flex-shrink: 0
+    align-items: center
+    place-content: center flex-start
+    margin-top: 0
+
+
+.c-heroAboutContent-headline
+  min-height: 1px
+  position: relative
+  flex: 1
+  max-width: 100%
+  //right: auto
+  //left: auto
+  pointer-events: none
+  @include media('>=medium')
+    flex: 0 0 70%
+    max-width: 70%
+    margin-left: 45%
+  @include media('>=large')
+    flex: 0 0 58%
+    max-width: 58%
+  &-1
+    max-width: 60%
+    @include media('>=medium')
+      max-width: 50%
+    @include media('>=largeX')
+      max-width: 60%
+  &-2
+    max-width: 95%
+    @include media('>=medium')
+      max-width: 75%
+    @include media('>=largeX')
+      max-width: 85%
+
+.c-heroAboutContent-text
+  box-sizing: border-box
+  min-height: 1px
+  position: relative
+  flex: 1
+  max-width: 100%
+  right: auto
+  left: auto
+  flex: 0 0 48%
+  max-width: 48%
+  margin-left: 55%
+  display: none
+  @include media('>=large')
+    display: block
+  @include media('>=largeX')
+    flex: 0 0 45%
+    max-width: 45%
+  &-content
+    padding-top: var(--rowGapLarge)
+    @include media('>=medium')
+      padding-top: var(--rowGapXLarge)!important
+    p
+      font-size: 24px
+      @include media('>=medium')
+        font-size: calc(24px * var(--scale))
+
+
+
+.c-heroAboutContent-text-onlyMobile
+  padding: 0 5%
+  @include media('>=medium')
+    max-width: 80%
+    padding: 0
+  @include media('>=large')
+    display: none
+  .c-heroAboutContent-text-content
+    padding-top: var(--rowGapNormal)
+    @include media('>=medium')
+      padding-top: var(--rowGapXLarge)!important
+
+.c-heroAbout-right
+  margin-left: -22.5px
+  margin-right: -22.5px
+  display: flex
+  flex-wrap: wrap
+  flex-grow: 0
+  flex-shrink: 0
+  align-items: normal
+  justify-content: flex-start
+  z-index: -1
+  position: relative
+
+
+.c-heroAboutImage
+  box-sizing: border-box
+  min-height: 1px
+  position: relative
+  padding-left: 22.5px
+  padding-right: 22.5px
+  flex: 0 0 100%
+  max-width: 100%
+  margin-left: 0
+  right: auto
+  left: auto
+  @include media('>=medium')
+    flex: 0 0 50%
+    max-width: 50%
+
+
+.c-heroAbout-breif
+  position: relative
+  p
+    max-width: 800px
+    font-weight: var(--fontWeightMedium)
+    @include media('<=mobile')
+      font-size: calc(32px * var(--scale))

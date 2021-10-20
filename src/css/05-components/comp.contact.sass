@@ -1,0 +1,65 @@
+
+.email-message
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+
+.email-message__container
+  background-color: #1a1715
+  max-width: var(--layoutWidthMax)
+  margin: 0 auto
+  padding-left: 5%
+  padding-right: 5%
+  padding-top: 16px
+  padding-bottom: 16px
+  text-align: center
+  width: 100%
+  position: absolute
+  left: 0
+  top: 0
+  transform: translateY(-100%)
+  transition: transform .5s cubic-bezier(.455,.03,.515,.955)
+  opacity: 0
+  span
+    @extend .meta
+    font-weight: var(--fontWeightMedium)
+    color: #FFFFFF
+    opacity: 0.9
+  &.--successful,
+  &.--failed
+    transform: translateY(0)
+    opacity: 1
+
+
+  @include media('>=medium')
+    padding-left: 60px
+    padding-right: 60px
+  @include media('>=large')
+    padding-left: 80px
+    padding-right: 80px
+  @media (min-width: 1440px)
+    padding-left: 120px
+    padding-right: 120px
+  @include media('>=largeXX')
+    padding-left: 230px
+    padding-right: 230px
+    width: 100%
+    max-width: 1900px
+    margin: 0 auto
+
+  &.--successful
+    background-color: #2A9979
+  &.--failed
+    background-color: #DE2E13
+
+
+.background-unit
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  img
+    width: 200px
+    @include media('>=medium')
+      width: 400px

@@ -10,17 +10,27 @@
 
 // components
 @import "03-elements/elements.button";
-@import "03-elements/elements.grid";
+@import "03-elements/elements.layout";
 @import "03-elements/elements.icon";
 @import "03-elements/elements.image";
+@import "03-elements/elements.form";
 
 // components
 @import "05-components/comp.menu";
+@import "05-components/comp.footer";
 @import "05-components/comp.homehero";
 @import "05-components/comp.headlines";
+@import "05-components/comp-hero";
 @import "05-components/comp.work";
 @import "05-components/comp.services";
 @import "05-components/comp.testimonials";
+@import "05-components/comp.creation";
+@import "05-components/comp.heroabout";
+@import "05-components/comp.aboutwork";
+@import "05-components/comp.benefits";
+@import "05-components/comp.inside";
+@import "05-components/comp.clients";
+@import "05-components/comp.contact";
 
 
 // vendors

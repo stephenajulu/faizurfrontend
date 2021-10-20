@@ -1,0 +1,21 @@
+.c-aboutbreif-grid
+  @include media('>=medium')
+    display: flex
+    justify-content: center
+
+  &-col
+    &.--left
+      width: 300px
+      max-width: 100%
+
+
+  p
+    max-width: calc(80em * 0.5)
+    font-size: 18px
+    line-height: 1.5
+    padding-bottom: var(--rowGapMedium)
+    @include media('>=medium')
+      margin-top: 0
+      font-size: calc(24px)
+
+

@@ -56,9 +56,10 @@ const paths = {
     lazySizesFit: 'node_modules/lazysizes/plugins/parent-fit/ls.parent-fit.js',
     greenSockGsap: 'src/js/vendors/gsap.min.js',
     slickCarousel: 'node_modules/slick-carousel/slick/slick.js',
+    marqueeJs: 'node_modules/jquery.marquee/jquery.marquee.js',
 
     // Common holding Lazyload, Image loading
-    common: 'src/js/comman.js',
+    common: 'src/js/global.js',
   },
 };
 
@@ -147,16 +148,17 @@ gulp.task('js-homepage', () => {
         paths.lib.jquery,
         paths.lib.imageLoaded,
         paths.lib.lazySizes,
-        // paths.lib.lazySizesFit,
+        paths.lib.lazySizesFit,
         paths.lib.greenSockGsap,
-        paths.lib.common,
         paths.lib.slickCarousel,
+        paths.lib.marqueeJs,
+        paths.lib.common,
         paths.root.js + "menu.js",
         paths.root.js + "homepage.js",
     ])
     .pipe(mode.development(sourcemaps.init()))
     .pipe(concat(
-        'home-bundle.min.js',
+        'bundle.js',
     ))
     .on('error', function (error) {
       gutil.log(gutil.colors.red(error.message));
@@ -174,14 +176,90 @@ gulp.task('js-homepage', () => {
         },
       })
     )
-    .pipe(gulp.dest(paths.root.distJs))
+    .pipe(gulp.dest(paths.root.distJs + "/home/"))
     .pipe(browsersync.stream());
 });
+
+
+// homepage
+gulp.task('js-global', () => {
+  return gulp
+    .src([
+        paths.lib.jquery,
+        paths.lib.imageLoaded,
+        paths.lib.lazySizes,
+        paths.lib.lazySizesFit,
+        paths.lib.greenSockGsap,
+        paths.lib.marqueeJs,
+        paths.lib.common,
+        paths.root.js + "menu.js",
+    ])
+    .pipe(mode.development(sourcemaps.init()))
+    .pipe(concat(
+        'bundle.js',
+    ))
+    .on('error', function (error) {
+      gutil.log(gutil.colors.red(error.message));
+      notifier.notify({
+        title: 'Homepage js concat compilation error',
+        message: error.message,
+      });
+    })
+    .pipe(
+      uglify({
+        compress: {
+          global_defs: {
+            DEBUG: false,
+          },
+        },
+      })
+    )
+    .pipe(gulp.dest(paths.root.distJs + "/global/"))
+    .pipe(browsersync.stream());
+});
+
+// homepage
+gulp.task('js-contact', () => {
+  return gulp
+    .src([
+        paths.lib.jquery,
+        paths.lib.imageLoaded,
+        paths.lib.lazySizes,
+        paths.lib.lazySizesFit,
+        paths.lib.greenSockGsap,
+        paths.lib.marqueeJs,
+        paths.lib.common,
+        paths.root.js + "menu.js",
+    ])
+    .pipe(mode.development(sourcemaps.init()))
+    .pipe(concat(
+        'bundle.js',
+    ))
+    .on('error', function (error) {
+      gutil.log(gutil.colors.red(error.message));
+      notifier.notify({
+        title: 'Homepage js concat compilation error',
+        message: error.message,
+      });
+    })
+    .pipe(
+      uglify({
+        compress: {
+          global_defs: {
+            DEBUG: false,
+          },
+        },
+      })
+    )
+    .pipe(gulp.dest(paths.root.distJs + "/contact/"))
+    .pipe(browsersync.stream());
+});
+
 
 // svg graphics
 gulp.task('svgstore', function() {
     return gulp
-        .src(paths.root.public + 'graphics/*.svg')
+        .src(paths.root.public + 'icons/*.svg')
         .pipe(rename({
             prefix: 'icon-'
         }))
@@ -197,7 +275,7 @@ gulp.task('svgstore', function() {
             prefix: 'icon-',
             inlineSvg: true
         }))
-        .pipe(gulp.dest(paths.root.templateDist + '/graphics/'));
+        .pipe(gulp.dest(paths.root.templateDist + '/icons/'));
 });
 
 // copy assets

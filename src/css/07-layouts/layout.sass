@@ -1,24 +1,34 @@
 .homepage--feature
-  padding-top: var(--padding-mobile)
-  padding-bottom: var(--padding-mobile)
-  @include media('>=tablet')
-    padding-top: var(--padding-tablet)
-    padding-bottom: var(--padding-tablet)
+  padding-top: var(--rowGapXLarge)
+  padding-bottom: var(--rowGapXLarge)
+  @include media('>=desktop')
+    padding-top: var(--rowGapXXLarge)
+    padding-bottom: var(--rowGapXXLarge)
   @include media('>=retina')
-    padding-top: var(--padding-desktop)
-    padding-bottom: var(--padding-desktop)
+    padding-top: var(--rowGapXXXLarge)
+    padding-bottom: var(--rowGapXXXLarge)
+
+
+  .workShowcase
+    @include media('>=tablet')
+      margin-top: var(--rowGapXXXXLarge)
+  .workShowcase__split-cols.--right
+    margin-top: -40px
+    @include media('>=tablet')
+      margin-top: calc(#{var(--rowGapXXXXLarge)} * -1)
 
 
 
 // workshowcase on homepage
-.homepage--feature
-  .workShowcase
-    @include media('>=tablet')
-      margin-top: 160px
-
-
-
-
+.about--feature
+  padding-top: var(--rowGapXLarge)
+  padding-bottom: var(--rowGapXLarge)
+  @include media('>=desktop')
+    padding-top: var(--rowGapXXLarge)
+    padding-bottom: var(--rowGapXXLarge)
+  @include media('>=retina')
+    padding-top: var(--rowGapXXXLarge)
+    padding-bottom: var(--rowGapXXXLarge)
 
 
 

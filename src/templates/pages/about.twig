@@ -1,0 +1,35 @@
+{% extends "../layouts/layout.twig" %}
+{% set pageClass = "about menu--dark" %}
+{% block content %}
+
+   {% include "../components/sections/heroabout.twig" %}
+   {% include "../components/sections/aboutwork.twig" %}
+   {% include "../components/sections/benefits.twig" %}
+   {% include "../components/sections/inside.twig" %}
+   {% include "../components/sections/clients.twig" %}
+
+
+{% endblock %}
+{% block included_scripts %}
+    <script src="js/global/bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js" integrity="sha512-CPA5LMoJI/a5HkSIAKcBtFXe4gqGjPUL2ExF/3PmhrrHI17wod9xOqqF+0WZQRKIIq0KwF8oG5BaiWobtrke3A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger)
+        let container = document.getElementById("wrapper-image");
+        gsap.to(container, {
+          x: () => -( document.documentElement.clientWidth) + "px",
+          ease: "power5.inOut",
+          scrollTrigger: {
+            trigger: ".wrapper-image",
+            invalidateOnRefresh: true,
+            pin: false,
+            scrub: 1,
+            start: "left",
+            end: () => "+=" + container.offsetWidth
+          }
+        })
+
+
+    </script>
+
+{% endblock %}

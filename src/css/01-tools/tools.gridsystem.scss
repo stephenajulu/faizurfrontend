@@ -3,6 +3,14 @@ $breakpoints: (
   'tablet': 960px,
   'desktop': 1280px,
   'retina': 1600px,
+  'retinaX': 1600px,
+
+  'xSmall': 360px,
+  'small': 576px,
+  'medium': 768px,
+  'large': 1280px,
+  'largeX': 1600px,
+  'largeXX': 1900px,
 ) !default;
 
 ///

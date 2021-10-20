@@ -1,0 +1,33 @@
+{% extends "../layouts/layout.twig" %}
+{% set pageClass = "Projects" %}
+{% block content %}
+
+    <section class="c-hero c-heroWork">
+        <div class="c-hero-content">
+            <div class="c-hero-container">
+                <div class="c-top-header">
+                    <span class="comman-label">SELECTED Work</span>
+                    <h2 class="h2 fontWeightMedium">Projects</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="c-workShowcase">
+        <div class="c-workShowcase-content">
+            <div class="c-workShowcase-container">
+                <div class="workShowcase workShowcase--work">
+                    {% for project in projects|slice(0, 6)|sort %}
+                        {% include "../components/molecules/projectcard-work.twig" %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+{% block included_scripts %}
+    <script src="js/global/bundle.js"></script>
+
+{% endblock %}

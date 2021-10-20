@@ -9,8 +9,8 @@ button
   text-transform: inherit
   font-family: inherit
   font-size: inherit
-  font-weight: inherit
-  letter-spacing: inherit
+  font-weight: var(--fontWeightMedium)
+  letter-spacing: 0.5px
   overflow: inherit
   border-radius: inherit
   cursor: pointer
@@ -114,3 +114,18 @@ button
       span
         color: #FFFFFF
         mix-blend-mode: difference
+
+
+// Pages button
+// ======================================
+.btn--contact
+  color: var(--linkColor)
+  width: auto!important
+  border-bottom: 1p solid var(--color-black)!important
+  border-radius: 0!important
+  opacity: 0.8
+  padding-left: 0!important
+  padding-right: 0!important
+  &:hover
+    opacity: 1
+    letter-spacing: 1px

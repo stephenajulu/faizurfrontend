@@ -1,42 +1,43 @@
 <header class="menu">
-  <div class="menu__container">
-    <div class="menu__navContainer">
-      <div class="menu__logo">
-        <div class="menu__logo--link">
-          {% include "logo.twig" %}
-        </div>
-      </div>
-      <nav class="menuNav">
-        <ul class="menuNav__list">
-          <li class="menuNav-item">
-            <a class="menuNav-item__link link-effect menuNav--active">
-              <aside class="menuNav--effect"></aside>
-              <span class="menuNav-link">Work</span>
-            </a>
-          </li>
-          <li class="menuNav-item">
-            <a class="menuNav-item__link link-effect">
-              <aside class="menuNav--effect"></aside>
-              <span class="menuNav-link">Shop</span>
-            </a>
-
-          </li>
-          <li class="menuNav-item">
-            <a class="menuNav-item__link link-effect">
-              <aside class="menuNav--effect"></aside>
-              <span class="menuNav-link">Adcademy</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="menu-btnRow">
-        <div class="menu-btn" aria-label="menu" >
-          <span class="menu-btn__text">Menu</span>
-          <div class="menu-btn__toggle">
-            <button class="menu-btn__toggleBtn js-btn--effectMagnetic" aria-label="menu" data-magnetic="" ><span></span><span></span></button>
-          </div>
-        </div>
-      </div>
+  <div class="menu-container">
+    <div class="menu__container">
+      <div class="menu__navContainer">
+           <div class="menu__logo">
+             <div class="menu__logo--link">
+               {% include "logo.twig" %}
+             </div>
+           </div>
+           <nav class="menuNav">
+             <ul class="menuNav__list">
+               <li class="menuNav-item js-linkHover">
+                 <a class="menuNav-item__link menuNav--active linkHover ">
+                   <aside class="linkHoverWrap"></aside>
+                   <span class="menuNav-link">Work</span>
+                 </a>
+               </li>
+               <li class="menuNav-item js-linkHover">
+                 <a class="menuNav-item__link linkHover">
+                   <aside class="linkHoverWrap"></aside>
+                   <span class="menuNav-link">Shop</span>
+                 </a>
+               </li>
+               <li class="menuNav-item js-linkHover">
+                 <a class="menuNav-item__link linkHover">
+                   <aside class="linkHoverWrap"></aside>
+                   <span class="menuNav-link">What's New</span>
+                 </a>
+               </li>
+             </ul>
+           </nav>
+           <div class="menu-btnRow">
+             <div class="menu-btn" aria-label="menu" >
+               <span class="menu-btn__text">Menu</span>
+               <div class="menu-btn__toggle">
+                 <button class="menu-btn__toggleBtn js-btn--effectMagnetic" aria-label="menu" data-magnetic="" ><span></span><span></span></button>
+               </div>
+             </div>
+           </div>
+         </div>
     </div>
   </div>
 </header>

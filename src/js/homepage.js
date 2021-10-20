@@ -60,6 +60,51 @@ function initWordAnimation() {
     setInterval(changeWord, 2500);
 }
 
+// Homepageslider
+// ================================================
+$('.js-cTestimonialSlider').slick({
+    autoplay: true,
+    autoplaySpeed: 5000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    asNavFor: '.js-cTestimonialSliderNav',
+    cssEase: 'cubic-bezier(.84, 0, .08, .99)',
+    vertical: true,
+    prevArrow: $('.prev'),
+    nextArrow: $('.next'),
+});
+$('.js-cTestimonialSliderNav').slick({
+    autoplay: true,
+    autoplaySpeed: 5000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    asNavFor: '.js-cTestimonialSlider',
+    dots: true,
+    centerMode: true,
+    fade: true,
+    focusOnSelect: true,
+    cssEase: 'cubic-bezier(.84, 0, .08, .99)',
+    appendDots: $('.slider-dots-box'),
+    dotsClass: 'slider-dots',
+    prevArrow: $('.prev'),
+    nextArrow: $('.next'),
+});
+
+// On before slide change
+$('.js-cTestimonialSliderNav').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+    $('.slider-dots-box button').html('');
+}).trigger('beforeChange');
+
+// On before slide change
+$('.js-cTestimonialSliderNav').on('afterChange', function(event, slick, currentSlide) {
+    $('.slider-dots-box button').html('');
+    $('.slider-dots-box .slick-active button')
+        .html(`<svg class="progress-svg" width="140" height="140">
+                <g transform="translate(0,0)">
+                <circle class="circle-go" cx="70" cy="70" r="68" ></circle>
+        		</g></svg>`);
+}).trigger('afterChange');
 
 // Calling function
 // ================================================

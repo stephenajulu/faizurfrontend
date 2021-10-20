@@ -43,14 +43,14 @@ function parallaxIt(e, target, movement){
 gsap.defaults({
   duration: 0.4
 })
-gsap.set([".menuNav--effect"], {
+gsap.set([".linkHoverWrap"], {
   visibility: "visible",
   xPercent: -101,
   ease: "power3.inOut"
 
 }); // for 'fouc' sakes
 
-const links = document.querySelectorAll('.menuNav-item'); // create triggers
+const links = document.querySelectorAll('.js-linkHover'); // create triggers
 
 function enter(hoverEffect) { // mouseenter function
   return gsap.fromTo(hoverEffect, {
@@ -71,7 +71,7 @@ function leave(aside) { // mouseleave function
 
 links.forEach(function(el) {
 
-  const hoverEffect = el.querySelector('.menuNav--effect');
+  const hoverEffect = el.querySelector('.linkHoverWrap');
   let animation = null;
   let isHovering = false;
   el.addEventListener("mouseenter", onEnter);

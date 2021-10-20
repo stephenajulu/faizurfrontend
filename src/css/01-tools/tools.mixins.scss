@@ -32,3 +32,36 @@
     clear: both;
   }
 }
+
+@mixin linkHover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%!important;
+  height: 100%!important;
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+
+@mixin paddingTop {
+  padding-top: var(--rowGapXLarge);
+  @include media('>=medium') {
+    padding-top: var(--rowGapXXLarge);
+  }
+  @include media('>=large') {
+    padding-top: var(--rowGapXXXXLarge);
+  }
+}
+
+@mixin paddingBottom {
+  padding-bottom: var(--rowGapXLarge);
+  @include media('>=medium') {
+    padding-bottom: var(--rowGapXXLarge);
+  }
+  @include media('>=large') {
+    padding-bottom: var(--rowGapXXXXLarge);
+  }
+}

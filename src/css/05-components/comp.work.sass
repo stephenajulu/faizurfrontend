@@ -1,9 +1,25 @@
+.c-featuredProjects
+  &-bottom
+    margin-top: var(--rowGapXXLarge)
+    @include media('>=medium')
+      margin-top: var(--rowGapXLarge)
+    @include media('>=large')
+      margin-top: var(--rowGapXXLarge)
+  .workShowcase__split-cols.--right
+    margin-top: calc(#{var(--rowGapXLarge)} * -1)
+    @include media('>=large')
+      margin-top: calc(#{var(--rowGapXXXLarge)} * -1)
+
+  .c-featuredProjects-container
+    @include media('<=small')
+      padding: 0 8px
+
+
+
+
+
 .workShowcase
   position: relative
-  &__container
-    @extend .container
-    @include media('<=mobile')
-      padding: 0 4px
   &__split
     display: flex
     justify-content: space-between
@@ -21,11 +37,6 @@
       img
         transform: scale3d(1.15,1.15,1)
 
-  .--right
-    margin-top: -40px
-    @include media('>=tablet')
-      margin-top: -140px
-
 
 
   &__preview
@@ -38,13 +49,11 @@
     will-change: transform
     transform: scaleX(1)
     background-color: var(--color-white-200)
-    @include media('>=tablet')
+    @include media('>=medium')
       margin: 32px 16px
-
     picture
       display: block
       transition: transform .4s
-
     img
       position: absolute
       top: 0
@@ -62,18 +71,18 @@
     display: inline-flex
     align-items: center
     justify-content: center
-    @include media('>=tablet')
+    @include media('>=medium')
       padding: 0 40px
-      margin-bottom: 80px
+      margin-bottom: var(--rowGapXLarge)
     .h5
       font-size: 1.125rem
-      font-weight: var(--fontWeightRegular)
+      font-weight: var(--fontWeightMedium)
       position: relative
       @media (max-width: 599.98px)
         font-size: 1rem
 
-      strong
-        @include media('>=tablet')
+      .workShowcase-title
+        @include media('>=medium')
           &:after
             display: inline-block
             position: relative
@@ -85,9 +94,10 @@
             background-color: var(--color-black-200)
             content: ""
 
+
     .meta
       font-size: var(--WorkShowcase-fontSize)
-      @include media('<=tablet')
+      @include media('<=medium')
         display: none
 
 
@@ -95,6 +105,88 @@
   .btn-viewmore
     margin: 0 auto
     display: table
+
+
+
+// work page
+.workShowcase--work
+  display: flex
+  flex-flow: row wrap
+  align-items: center
+  justify-content: space-between
+  .workShowcase__item
+    display: block
+    width: 100%
+    overflow: hidden
+    position: relative
+    margin-bottom: 16px
+    clip-path: polygon(0 0,100% 0,100% 100%,0 100%)
+    transition: all 400ms cubic-bezier(.455,.03,.515,.955)
+    transform: translateY(0)
+    @include media('>=medium')
+      width: calc(50% - 10px)
+      margin: 0 0 18px 0
+    @include media('>=large')
+      width: calc(33.33333% - 20px)
+      margin-bottom: 32px
+    &:hover
+      clip-path: polygon(2% 4%,98% 0,98% 92%,2% 94%)
+      transition-delay: 0s!important
+      .workShowcase__caption
+        transform: translate3d(0, 0, 0)
+        opacity: 1
+      .h5
+        opacity: 1
+
+  .workShowcase__preview
+    margin: 0
+    padding-bottom: 130.44%
+
+  .workShowcase__caption
+    position: absolute
+    top: 0
+    left: 0
+    box-sizing: border-box
+    width: 100%
+    height: 100%
+    background-color: #1a1715
+    padding: 60px
+    display: block
+    transition: all 320ms var(--transition)
+    opacity: 0
+    transform: translate3d(100%, 0, 0)
+    @include media('<=small')
+      opacity: 1
+      transform: none
+      background-color: transparent
+      padding: 24px
+    .h5
+      color: var(--color-white)
+      text-align: left
+      font-size: calc(24px * var(--scale))
+      font-weight: var(--fontWeightRegular)!important
+      transition: all 200ms cubic-bezier(.455,.03,.515,.955)
+      opacity: 0
+      @include media('<=small')
+        opacity: 1
+        position: relative
+        text-transform: uppercase
+        font-weight: var(--fontWeightMedium)!important
+        font-size: 1rem
+        letter-spacing: 1.5px
+        display: block
+
+      span
+        display: block
+        margin-bottom: var(--columnPaddingNormal)
+
+      .workShowcase-subhead
+        color: #99918B
+        font-size: 1.125rem
+        line-height: 1.5
+        max-width: 90%
+        @include media('<=small')
+          display: none
 
 
 

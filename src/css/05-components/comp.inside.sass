@@ -1,0 +1,85 @@
+.wrapper-image
+  --wrapperImageHeight: 600px
+  --wrapperImageHeight-mobile: 320px
+  width: 100%
+  height: var(--wrapperImageHeight-mobile)
+  margin: auto
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: center
+  flex: none
+  @include media('>=large')
+    height: var(--wrapperImageHeight)
+
+  &-container
+    display: flex
+    top: 0
+    height: 100%
+    width: fit-content
+    position: relative
+
+  &-inner
+    height: 100%
+    width: -moz-fit-content
+    width: fit-content
+    display: flex
+    align-items: start
+    position: relative
+    pointer-events: none
+
+  &-item
+    height: 100%
+    position: relative
+    display: flex
+    overflow: hidden
+    flex-direction: column-reverse
+    justify-content: center
+    background-color: #fff
+    margin-right: 16px
+
+  .image-container
+    width: 250px
+    overflow: hidden
+    position: relative
+    flex: none
+    @include media('>=large')
+      width: 400px
+      height: var(--wrapperImageHeight)
+    img
+      height: 100%
+      width: 100%
+      object-fit: cover
+
+  &-item
+    &:nth-child(2n+1)
+      margin-top: 40px
+    &:nth-child(3n+1)
+      margin-top: -32px
+    &:nth-child(4n+1)
+      margin-top: 24px
+
+    &.--image-2
+      .image-container
+        margin-top: 16px
+        height: 50%
+        &:last-child
+          margin-top: 0
+
+    &.--image-3
+      .image-container
+        height: var(--wrapperImageHeight)
+        width: 200px
+
+
+
+.c-expertise
+  max-width: 1200px
+  margin: 0 auto
+  .service-list
+    border-top: 3px solid var(--color-white-300)
+    padding-top: 24px
+    li
+      border-bottom: 0
+
+

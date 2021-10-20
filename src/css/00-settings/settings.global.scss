@@ -1,15 +1,25 @@
 html{
   --transition: cubic-bezier(.86,0,.07,1);
-  --container: 1520px;
-  --grid-space-onMobile: 5%;
-  --grid-space-onTablet: 24px;
-  --grid-space-onDesktop: 40px;
-  --columnPaddingNormal: 16px;
+  --layoutWidthMax: 100%;
   --buttonFontFamily: var(--fontFamilyMeta);
   --buttonFontSize: 1rem;
   --linkColor: var(--color-black);
   --LinkUnderline: var(--color-white-400);
+  --linkHoverColor: 0.6;
+  --menuTransition: cubic-bezier(.86,0,.07,1);
   --vw: 1vw;
+  --marquee-width: 100vw;
+  --rowGapNormal: 8px;
+  --rowGapMedium: 24px;
+  --rowGapLarge: 40px;
+  --rowGapXLarge: 60px;
+  --rowGapXXLarge: 80px;
+  --rowGapXXXLarge: 120px;
+  --rowGapXXXXLarge: 160px;
+  --columnPaddingNormal: 16px;
+  --columnPaddingMedium: 24px;
+  --columnPaddingLarge: 40px;
+  --cTestimonialAvatar: 120px
 }
 
 
@@ -26,22 +36,19 @@ html{
   --color-accent-green: #00da81;
   --color-accent-yellow: #ffb900;
   --color-accent-red: #ff3512;
+  --color-black-off: #0F0F0F;
 
   // typography
-  --fontFamilyHeading: 'Aeonik Pro', "Helvetica Neue", Arial, Sans-Serif;
-  --fontFamilyBody: 'Aeonik Pro', "Helvetica Neue", Arial, Sans-Serif;
-  --fontFamilyMeta: 'Aeonik Pro', "Helvetica Neue", Arial, Sans-Serif;
+  --fontFamilyHeading: EudoxusSans, "Helvetica Neue", Arial, Sans-Serif;
+  --fontFamilyBody: EudoxusSans, "Helvetica Neue", Arial, Sans-Serif;
+  --fontFamilyMeta: EudoxusSans, "Helvetica Neue", Arial, Sans-Serif;
+  --fontWeightLight: 300;
   --fontWeightRegular: 400;
   --fontWeightMedium: 500;
-  --fontWeightBold: 600;
-  --fontWeightBolder: 700;
+  --fontWeightBold: 700;
   --hoverTransition: 150ms all ease-in-out;
 
   // elements
   --button-border: var(--color-white-300);
 
-  // padding
-  --padding-mobile: 60px;
-  --padding-tablet: 100px;
-  --padding-desktop: 120px;
 }

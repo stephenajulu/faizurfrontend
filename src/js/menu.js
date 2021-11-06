@@ -1,8 +1,20 @@
 // Menu hamburger + Magnet button
 // ================================================
 $("button.menu-btn__toggleBtn").click(function() {
-  $("html").toggleClass("sidebar-open");
+  $("html").toggleClass("-is-scroll-disable menu--dark");
+  $(".menu .menuNav").toggleClass("hidden");
+  $(".navbarMenu").toggleClass("menu-open");
   $(this).toggleClass("-active");
+});
+
+
+$(document).ready(function()
+{
+     $(window).on("resize",function() {
+          var bodyheight = $(document).height();
+       $(".www-navigation__desktop__menus__top-offset").height(bodyheight);
+     });
+
 });
 
 

@@ -17,15 +17,15 @@
                                     {% endfor %}
                                 </div>
                                 <div class="workShowcase__split-cols --right">
-                                    {% for project in projects|slice(3, 6)|sort %}
+                                    {% for project in projects|slice(-5,3)|sort %}
                                         {% include "../../components/molecules/projectcard.twig" %}
                                     {% endfor %}
                                 </div>
                             </div>
 
-                            <button class="btn btn--border btn--radius-100 btn--effectPan btn-viewmore" data-magnetic="">
+                            <a href="projects.html" class="btn btn--border btn--radius-100 btn--effectPan btn-viewmore">
                                 <span>View all projects</span>
-                            </button>
+                            </a>
                         </div>
                     </div>
             </div>

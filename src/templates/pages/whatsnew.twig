@@ -1,0 +1,97 @@
+{% extends "../layouts/layout.twig" %}
+{% set pageClass = "whatsnew  menu--dark" %}
+{% set page = 'whatsnew' %}
+{% block content %}
+
+    <div class="c-whatsnew-header">
+        <img src="public/images/banners/whatsnew.jpg" alt="" class="c-whatsnew-header-bg">
+    </div>
+
+
+    <div class="c-whatsnew">
+        <div class="c-whatsnew-content">
+            <div class="c-whatsnew-container">
+                <div class="c-whatsnew-top">
+                    <h1 class="h5 headline fontWeightMedium colorTextWhite">What's New</h1>
+                    <p class="subhead colorTextWhite">Insights about work & tutorials</p>
+                </div>
+                <div class="c-whatsnew-bottom">
+                    <div class="c-whatsnew-grid" id="content">
+                        <div class="postLink"><div class="loader-placeholder"></div></div>
+                        <div class="postLink"><div class="loader-placeholder"></div></div>
+                        <div class="postLink"><div class="loader-placeholder"></div></div>
+                        <div class="postLink"><div class="loader-placeholder"></div></div>
+                        <div class="postLink"><div class="loader-placeholder"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+{% endblock %}
+{% block included_scripts %}
+    <script src="js/global/bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+    <script>
+        var contentfulClient = contentful.createClient({
+            space: 'qk92r3yjulwl',
+            accessToken: 'DWeOmnjOzLhcdoaQkzXqiwG5QJR_0tIbWvJK2lHz9Lk',
+        })
+
+        var project_CONTENT_TYPE_ID = 'whatsnew'
+        var container = document.getElementById('content')
+
+        contentfulClient.getEntries({
+            'content_type': project_CONTENT_TYPE_ID,
+            'order': '-sys.createdAt'
+        })
+            .then(function(entries) {
+                container.innerHTML = renderProducts(entries.items);
+                console.log(entries.items);
+                imagesLoaded(document.querySelector('.postLink__thumbnail'), function (instance) {
+                            $('img').addClass('loaded');
+                        });
+            })
+        function renderProducts(project) {
+            return project.map(renderSingleProject).join('\n')
+        }
+
+        function renderSingleProject(project) {
+            var fields = project.fields
+            var title = project.fields.title
+            var slug = project.fields.slug
+            var slugName = project.fields.slugName
+            var platfrom = project.fields.platfrom
+            var image = project.fields.image
+            return '<div class="postLink '+platfrom+'">'+
+            '  <a class="link-overlap" href="'+slug+'" target="_blank"></a>'+
+            '    <div class="postLink__thumbnail">'+
+            '      <div class="postLink__thumbnail-inner">'+ renderImage(fields.image) +'</div>'+
+            '  </div>'+
+            '  <div class="postLink__info">'+
+            '    <h4 class="h6 postLink-title">'+title+'</h4>'+
+            '    <a class="postLink-url social" href="'+slug+'" >'+slugName+'</a>'+
+            '  </div>'+
+            '</div>'
+        }
+
+
+        function renderImage(image) {
+            if (image && image.fields.file) {
+                return '<img class="image lazy" alt="faizur" src="' + image.fields.file.url + '"  />'
+            } else {
+                return ''
+            }
+        }
+
+
+    </script>
+
+{% endblock %}

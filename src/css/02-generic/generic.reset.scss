@@ -77,6 +77,7 @@ input[type="tel"],
 input[type="text"],
 textarea {
   -webkit-appearance: none;
+  font-family: var(--fontFamilyBody)
 }
 
 button {
@@ -191,4 +192,11 @@ overflow-x: hidden}
 
 [data-scroll]{
 will-change: transform
+}
+
+img{
+  border: 0;
+  vertical-align: middle;
+  display: inline-block;
+  max-width: 100%;
 }

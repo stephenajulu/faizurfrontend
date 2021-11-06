@@ -1,5 +1,6 @@
 {% extends "../layouts/layout.twig" %}
 {% set pageClass = "projects" %}
+{% set page = 'shop' %}
 {% block content %}
 
     <div class="c-contact">
@@ -7,15 +8,16 @@
             <div class="c-contact-container">
                 <div class="c-contact-top c-hero">
                     <span class="comman-label">Contact</span>
-                    <h1 class="h1 headline fontWeightMedium">Hello! We’ve been waiting for you.</h1>
-                    <p class="subhead">Fill in the form or <a href="mailto:me@faizur.com" class="link link--has-underline" onmouseover="this.href=this.href.replace(/x/g,'');">Send us an email</a></p>
+                    <h1 class="h1 headline fontWeightMedium">Let’s make it <i>happen</i>
+                    </h1>
+                    <p class="subhead fontWeightMedium">Write an email <a href="mailto:me@faizur.com" class="link" onmouseover="this.href=this.href.replace(/x/g,'');">me@faizur.com</a> or fill in the <a href="#" class="link link--has-underline">airtable form</a></p>
                 </div>
                 <div class="c-contact-bottom">
                     <form id="businessInquiryForm" class="contact-form">
                         <div class="input-group">
                             <div class="input">
-                                <input class="input__field" type="text" id="from_name" name="from_name" required>
-                                <label class="input__label input__label-custom" for="from_name"> <span
+                                <input class="input__field" type="text" id="name" name="name">
+                                <label class="input__label input__label-custom" for="name"> <span
                                             class="input__label-content input__label-content-custom">What's your name?</span>
                                 </label>
                                 <div class="graphic"></div>
@@ -30,12 +32,11 @@
                                 <div class="graphic"></div>
                             </div>
                         </div>
-                        <span class="message input-meta"></span>
-                        <div class="message input-meta error">Please enter a valid email address</div>
+{#                        <span class="message input-meta"></span>#}
+{#                        <div class="message input-meta error">Please enter a valid email address</div>#}
                         <div class="input-group">
                             <div class="input">
-                                <textarea class="input__field" id="message_html" name="message_html"
-                                          required></textarea>
+                                <textarea class="input__field" id="message_html" name="message_html"></textarea>
                                 <label class="input__label input__label-custom" for="message_html">
                                     <span class="input__label-content input__label-content-custom">Tell us about your project...</span>
                                 </label>
@@ -68,93 +69,70 @@
 
 {% endblock %}
 {% block included_scripts %}
-    <script src="js/global/bundle.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js"></script>
+    <script src="js/contact/bundle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/classie/1.0.1/classie.min.js" integrity="sha512-sOMf7h9Uvkeku+gv6cIDNhpgvcunE9pAf3A/ezNcRG7//ZZv7nDm6ut69qAXTIU5J9JTbZ+PfrwqstYrq2ZnQQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
 
     <script>
-        (function () {
-            emailjs.init("user_zg4Q19pGpH4GnDrANXciX");
-        })();
-
-        window.dispatchEvent(new Event("resize"));
-        const btn = document.getElementById("businessInquiryFormTrigger");
-        document.getElementById("businessInquiryForm")
-            .addEventListener("submit", function (event) {
-                event.preventDefault();
-
-                btn.value = "Sending...";
-
-                const serviceID = "default_service";
-                const templateID = "businessEmail";
-
-                emailjs.sendForm(serviceID, templateID, this)
-                    .then(() => {
-                        $("#messageSuccess").addClass("--successful").delay(5000).queue(function(){
-                            $(this).removeClass("--successful").dequeue();
-                        });
-                        this.reset()
-                    }, (err) => {
-                        $("#messageFailed").addClass("--messageFailed").delay(10000).queue(function(){
-                            $(this).removeClass("--messageFailed").dequeue();
-                        });
-                        this.reset()
-                    });
-                return false;
-            });
 
 
-        !function () {
-            var t;
-            function e(t) {
-                classie.add(t.target.parentNode, "input--filled")
-            }
-            function i(t) {
-                "" === t.target.value.trim() && classie.remove(t.target.parentNode, "input--filled")
-            }
 
-            String.prototype.trim || (t = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, String.prototype.trim = function () {
-                return this.replace(t, "")
-            }), [].slice.call(document.querySelectorAll("input.input__field, textarea.input__field")).forEach(function (t) {
-                "" !== t.value.trim() && classie.add(t.parentNode, "input--filled"), t.addEventListener("focus", e), t.addEventListener("blur", i)
-            })
-        }();
-        var textarea = document.querySelector("textarea");
-        textarea.addEventListener("keydown", autosize);
+$.validator.addMethod("letters", function(value, element) {
+         return this.optional(element) || value == value.match(/^[a-zA-Z\s]*$/);
+       });
 
-        function autosize() {
-            var el = this;
-            setTimeout(function () {
-                el.style.cssText = "height: 80px;";
-                // for box-sizing other than "content-box" use:
-                // el.style.cssText = '-moz-box-sizing:content-box';
-                el.style.cssText = "height:" + el.scrollHeight + "px";
-            }, 0);
+var btn = $("#businessInquiryFormTrigger");
+//initialize email js
+$("#businessInquiryForm").submit(function(e) {
+    e.preventDefault();
+    var form = $(this);
+    form.validate({
+      rules: {
+        email: {
+          required: true,
+          email: true
+        },
+          message_html: {
+          required: true,
+          minlength: 100,
         }
+      },
+      messages: {
+        name: "Please specify your name (only letters and spaces are allowed)",
+        message_html: "Atleast 100 words required "
+      },
+      submitHandler: function() {
+        //send message here
+        btn.val('Sending....');
+        var serviceID = "default_service";
+        var templateID = "businessEmail";
 
+          emailjs.sendForm(serviceID, templateID, form[0])
+            .then(() => {
+                $("#messageSuccess").addClass("--successful").delay(2000).queue(function(){
+                    $(this).removeClass("--successful").dequeue();
+                    location.reload();
+                });
+                $('#businessInquiryForm').trigger('reset');
+                btn.val('Sending...');
 
-        $("#message_html").on("keyup", function (event) {
-            var currentString = $("#message_html").val()
-            $(".message-counter").html(currentString.length);
-            if (currentString.length <= 500) {  /*or whatever your number is*/
-                //do some css with your div
-            } else {
-                //do some different stuff with your div
-            }
-        });
+            }, (err) => {
+                $("#messageFailed").addClass("--messageFailed").delay(2000).queue(function () {
+                    $(this).removeClass("--messageFailed").dequeue();
+                    location.reload();
+                });
+                btn.val('Email has been not send, Please try with form');
 
-        $(function () {
-            // var regExp = /^\w*(\.\w*)?@\w*\.[a-z]+(\.[a-z]+)?$/;
-            var regExp = /^([\w\.\+]{1,})([^\W])(@)([\w]{1,})(\.[\w]{1,})+$/;
-            $("[type=\"email\"]").on("keyup", function () {
-                $(".message").hide();
-                regExp.test($(this).val()) ? $(".message.success").show() : $(".message.error").show();
             });
 
-        });
+       }
+    });
+
+
+
+});
+
 
     </script>
-
 {% endblock %}

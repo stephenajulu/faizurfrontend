@@ -4,25 +4,25 @@
       <div class="menu__navContainer">
            <div class="menu__logo">
              <div class="menu__logo--link">
-               {% include "logo.twig" %}
+               <a href="/">{% include "logo.twig" %}</a>
              </div>
            </div>
            <nav class="menuNav">
              <ul class="menuNav__list">
                <li class="menuNav-item js-linkHover">
-                 <a class="menuNav-item__link menuNav--active linkHover ">
+                 <a href="projects.html" class="menuNav-item__link linkHover {% if page=='work'%}menuNav--active{% endif %}">
                    <aside class="linkHoverWrap"></aside>
                    <span class="menuNav-link">Work</span>
                  </a>
                </li>
                <li class="menuNav-item js-linkHover">
-                 <a class="menuNav-item__link linkHover">
+                 <a href="shop.html" class="menuNav-item__link linkHover {% if page=='shop'%}menuNav--active{% endif %}">
                    <aside class="linkHoverWrap"></aside>
                    <span class="menuNav-link">Shop</span>
                  </a>
                </li>
                <li class="menuNav-item js-linkHover">
-                 <a class="menuNav-item__link linkHover">
+                 <a href="whatsnew.html" class="menuNav-item__link linkHover {% if page=='whatsnew'%}menuNav--active{% endif %}">
                    <aside class="linkHoverWrap"></aside>
                    <span class="menuNav-link">What's New</span>
                  </a>

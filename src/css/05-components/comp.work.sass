@@ -113,7 +113,9 @@
   display: flex
   flex-flow: row wrap
   align-items: center
-  justify-content: space-between
+  @include media('>=mobile')
+    margin-left: -16px
+    margin-right: -16px
   .workShowcase__item
     display: block
     width: 100%
@@ -124,11 +126,11 @@
     transition: all 400ms cubic-bezier(.455,.03,.515,.955)
     transform: translateY(0)
     @include media('>=medium')
-      width: calc(50% - 10px)
-      margin: 0 0 18px 0
+      width: calc(50% - 16px)
+      margin: var(--rowGapNormal)
     @include media('>=large')
-      width: calc(33.33333% - 20px)
-      margin-bottom: 32px
+      width: calc(33.33333% - 32px)
+      margin: 16px
     &:hover
       clip-path: polygon(2% 4%,98% 0,98% 92%,2% 94%)
       transition-delay: 0s!important

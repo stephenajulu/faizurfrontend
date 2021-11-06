@@ -3,7 +3,7 @@
   top: 0
   left: 0
   width: 100%
-  z-index: 99
+  z-index: 999
   --navColor: var(--color-white)
   --navColorDark: var(--color-black)
   --navFontFamily: var(--font-family-meta)
@@ -23,6 +23,8 @@
   &__logo
     transition: var(--hoverTransition)
     transition-property: color,opacity
+    position: relative
+    z-index: 1
     &--link svg
       height: 28px
       fill: var(--navDark)
@@ -34,7 +36,10 @@
   .menuNav
     margin-left: 40px
     position: relative
-    z-index: 100
+    z-index: 2
+    &.hidden
+      opacity: 0
+      pointer-events: none
     @include media('<=medium')
       display: none
     &__list
@@ -101,7 +106,6 @@
   color: var(--navDark)
   z-index: 2
   overflow: hidden
-  position: relative
   transition: all 400ms var(--menuTransition)
   .menuNav--link
     position: relative
@@ -124,15 +128,12 @@
   transition: opacity 1s linear 0.2s
 
 
-
-
-
 // menuBtn
 .menu
   &-btnRow
     position: fixed
     //pointer-events: none
-    z-index: 99
+    z-index: 0
     left: 0
     right: 0
     margin: 0 auto
@@ -254,6 +255,74 @@
 
 
 
+// Topbar
+//===================================
+.www-navigation-container
+  position: fixed
+  top: 0
+  z-index: 998
+  width: 100%
+  padding-left: 16px
+  padding-right: 16px
+  -webkit-transition: background-color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1)
+  -o-transition: background-color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1)
+  transition: background-color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1)
+  background-color: transparent
+  will-change: background-color
+
+  .www-navigation__desktop__menus
+    position: absolute
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    justify-content: center
+    width: 100%
+    left: 0
+    top: 0
+    z-index: 1
+    pointer-events: none
+    height: 620px
+
+  .www-navigation__desktop__menus__top-offset
+    left: 0
+    width: 100%
+    height: 100%
+    position: absolute
+    overflow: hidden
+    background-color: #000
+    visibility: hidden
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0)
+    transition: visibility 0.35s step-end, -webkit-clip-path 0.35s cubic-bezier(0.165, 0.84, 0.44, 1)
+    -o-transition: clip-path 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), visibility 0.35s step-end
+    transition: clip-path 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), visibility 0.35s step-end
+
+  &.menu-open
+    .www-navigation__desktop__menus__top-offset
+      visibility: visible
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+      -webkit-transition: visibility 0.35s step-start, -webkit-clip-path 0.35s cubic-bezier(0.165, 0.84, 0.44, 1)
+      transition: visibility 0.35s step-start, -webkit-clip-path 0.35s cubic-bezier(0.165, 0.84, 0.44, 1)
+      -o-transition: clip-path 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), visibility 0.35s step-start
+      transition: clip-path 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), visibility 0.35s step-start
+      transition: clip-path 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), visibility 0.35s step-start, -webkit-clip-path 0.35s cubic-bezier(0.165, 0.84, 0.44, 1)
+
+
+.www-navigation__desktop__menu
+  position: absolute
+  width: 100%
+  height: 100%
+  opacity: 0
+  visibility: hidden
+  -webkit-transition: opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), visibility 0.6s step-end
+  -o-transition: opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), visibility 0.6s step-end
+  transition: opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), visibility 0.6s step-end
+
+
+
+
 // menu style
 //===================================
 .menu--dark
@@ -271,3 +340,9 @@
 
   .menu-btn__toggle span
     background-color: var(--navLight)
+
+
+
+
+
+

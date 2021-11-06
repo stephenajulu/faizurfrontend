@@ -230,6 +230,7 @@ gulp.task('js-contact', () => {
         paths.lib.marqueeJs,
         paths.lib.common,
         paths.root.js + "menu.js",
+        paths.root.js + "contact.js",
     ])
     .pipe(mode.development(sourcemaps.init()))
     .pipe(concat(

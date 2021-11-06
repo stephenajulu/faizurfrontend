@@ -32,13 +32,14 @@ function initWordAnimation() {
     function animateLetterOut(cw, i) {
         setTimeout(function () {
             cw[i].className = 'letter out';
-        }, i * 80);
+        }, i * 0); // changes here i * 80;
     }
 
     function animateLetterIn(nw, i) {
         setTimeout(function () {
             nw[i].className = 'letter in';
-        }, 340 + i * 80);
+        }, 340 + i * 1); //changes here 340 + i * 80
+
     }
 
     function splitLetters(word) {

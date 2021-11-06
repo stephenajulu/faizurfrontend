@@ -1,19 +1,20 @@
 {
-  "projects": [{
-    "id": "1",
-    "title": "Vencortex",
-    "text": "We helped Vencortex in redesigning a whole new customer experience.",
-    "image1x": "https://cdn.cuberto.com/cb/img/sigma/card.jpg",
-    "image2x": "https://cdn.cuberto.com/cb/img/sigma/card@2x.jpg",
-    "alt": "faizur",
-    "slug": "https://dribbble.com/fazurrehman/projects/2041240-Vencortex"
-  },
+  "projects": [
+    {
+      "id": "1",
+      "title": "Vencortex",
+      "text": "Redesigning a whole new customer experience for idea to investment.",
+      "image1x": "public/images/work/vencortex/cover.jpg",
+      "image2x": "public/images/work/vencortex/cover-2x.jpg",
+      "alt": "faizur",
+      "slug": "https://dribbble.com/fazurrehman/projects/2041240-Vencortex"
+    },
     {
       "id": "2",
       "title": "Avo Rewards",
-      "text": "We designed a whole new mobile app to enhance the user experience.",
-      "image1x": "https://cdn.cuberto.com/cb/img/sigma/card.jpg",
-      "image2x": "https://cdn.cuberto.com/cb/img/sigma/card@2x.jpg",
+      "text": "Designing app for loyalty programs and boosting customer engagement.",
+      "image1x": "public/images/work/avoreward/cover.jpg",
+      "image2x": "public/images/work/avoreward/cover-2x.jpg",
       "alt": "faizur",
       "slug": "https://dribbble.com/fazurrehman/projects/2041240-Vencortex"
     },
@@ -21,44 +22,132 @@
       "id": "3",
       "title": "Faizur",
       "text": "Creating a new visual language for my personal brand.",
-      "image1x": "https://cdn.cuberto.com/cb/img/sigma/card.jpg",
-      "image2x": "https://cdn.cuberto.com/cb/img/sigma/card@2x.jpg",
+      "image1x": "public/images/work/faizur/cover.jpg",
+      "image2x": "public/images/work/faizur/cover.jpg",
       "alt": "faizur",
       "slug": "https://dribbble.com/fazurrehman/projects/2041240-Vencortex"
     },
     {
       "id": "4",
-      "title": "Twiddle App",
-      "text": "We helped Twiddle App rebrand and create a more fun and engaging app experience.",
-      "image1x": "https://cdn.cuberto.com/cb/img/sigma/card.jpg",
-      "image2x": "https://cdn.cuberto.com/cb/img/sigma/card@2x.jpg",
+      "title": "Taper",
+      "text": "Redesigning new app for discovering barber and beauty professionals.",
+      "image1x": "public/images/work/taper/cover.jpg",
+      "image2x": "public/images/work/taper/cover-2x.jpg",
       "alt": "faizur",
       "slug": "https://dribbble.com/fazurrehman/projects/2041240-Vencortex"
     },
     {
       "id": "5",
-      "title": "The Wanderful",
-      "text": "We have worked closely with The Wanderful for over 2 years helping develop their entire brand and online presence.",
-      "image1x": "https://cdn.cuberto.com/cb/img/sigma/card.jpg",
-      "image2x": "https://cdn.cuberto.com/cb/img/sigma/card@2x.jpg",
+      "title": "Future Proof",
+      "text": "Designing a website that support immunity, health, and energy.",
+      "image1x": "public/images/work/futureproof/cover.jpg",
+      "image2x": "public/images/work/futureproof/cover.jpg",
       "alt": "faizur",
       "slug": "https://dribbble.com/fazurrehman/projects/2041240-Vencortex"
     },
     {
       "id": "6",
       "title": "MoneyMore",
-      "text": "We delivered a newly designed app for IOs & Android.",
-      "image1x": "https://cdn.cuberto.com/cb/img/sigma/card.jpg",
-      "image2x": "https://cdn.cuberto.com/cb/img/sigma/card@2x.jpg",
+      "text": "Designing app for payment method providing instant loans for online purchases.",
+      "image1x": "public/images/work/moneymour/cover.jpg",
+      "image2x": "public/images/work/moneymour/cover-2x.jpg",
+      "alt": "faizur",
+      "slug": "https://dribbble.com/fazurrehman/projects/2041240-Vencortex"
+    },
+    {
+      "id": "7",
+      "title": "Twiddle",
+      "text": "Creating a more fun and engaging app for consumer & creator experiences.",
+      "image1x": "public/images/work/twiddle/cover.jpgg",
+      "image2x": "public/images/work/twiddle/cover-2x.jpg",
+      "alt": "faizur",
+      "slug": "https://dribbble.com/fazurrehman/projects/2041240-Vencortex"
+    },
+    {
+      "id": "8",
+      "title": "The Wanderful",
+      "text": "Working closely with The Wanderful for over 2 years helping develop their entire brand and online presence.",
+      "image1x": "public/images/work/thewanderful/cover.jpgg",
+      "image2x": "public/images/work/thewanderful/cover-2x.jpg",
       "alt": "faizur",
       "slug": "https://dribbble.com/fazurrehman/projects/2041240-Vencortex"
     }
   ],
-
-  "socialmedia": [{
-    "platform": "Instagram",
-    "slug": "https://www.instagram.com/fazurrehman/"
-  },
+  "products": [
+    {
+      "id": "product-1",
+      "image": "public/images/shop/grid-layout/cover.jpg",
+      "new": "New",
+      "offer": "Special offer",
+      "bestSelling": "Best Selling",
+      "category": "Design",
+      "title": "Grid Layout",
+      "describe": "4 unique grid systems for iPhone, iPad, Desktop, Dashboard and for responsive designs.",
+      "meta": "For figma",
+      "discountClass": "--has-no-discount",
+      "discount": "35% Off",
+      "offerPrice": "6$",
+      "originalPrice": "10$",
+      "tags": "--new --bestselling",
+      "slug": "https://dribbble.com/fazurrehman/projects/2041240-Vencortex"
+    },
+    {
+      "id": "product-2",
+      "image": "public/images/shop/grid-layout/cover.jpg",
+      "new": "New",
+      "offer": "Special offer",
+      "bestSelling": "Best Selling",
+      "category": "Design",
+      "title": "Grid Layout",
+      "describe": "4 unique grid systems for iPhone, iPad, Desktop, Dashboard and for responsive designs.",
+      "meta": "For figma",
+      "discountClass": "--has-discount",
+      "discount": "35% Off",
+      "offerPrice": "6$",
+      "originalPrice": "10$",
+      "tags": "--new --bestselling",
+      "slug": "https://dribbble.com/fazurrehman/projects/2041240-Vencortex"
+    },
+    {
+      "id": "product-3",
+      "image": "public/images/shop/grid-layout/cover.jpg",
+      "new": "New",
+      "offer": "Special offer",
+      "bestSelling": "Best Selling",
+      "category": "Design",
+      "title": "Grid Layout",
+      "describe": "4 unique grid systems for iPhone, iPad, Desktop, Dashboard and for responsive designs.",
+      "meta": "For figma",
+      "discountClass": "--has-discount",
+      "discount": "35% Off",
+      "offerPrice": "6$",
+      "originalPrice": "10$",
+      "tags": "--offer",
+      "slug": "https://dribbble.com/fazurrehman/projects/2041240-Vencortex"
+    },
+    {
+      "id": "product-3",
+      "image": "public/images/shop/grid-layout/cover.jpg",
+      "new": "New",
+      "offer": "Special offer",
+      "bestSelling": "Best Selling",
+      "category": "Design",
+      "title": "Grid Layout",
+      "describe": "4 unique grid systems for iPhone, iPad, Desktop, Dashboard and for responsive designs.",
+      "meta": "For figma",
+      "discountClass": "--has-discount",
+      "discount": "35% Off",
+      "offerPrice": "6$",
+      "originalPrice": "10$",
+      "tags": "--new --bestselling --offer",
+      "slug": "https://dribbble.com/fazurrehman/projects/2041240-Vencortex"
+    }
+  ],
+  "socialmedia": [
+    {
+      "platform": "Instagram",
+      "slug": "https://www.instagram.com/fazurrehman/"
+    },
     {
       "platform": "Youtube",
       "slug": "https://www.youtube.com/channel/UCQR7vuOpqGq1MmY4HHvlTyw?sub_confirmation=1"
@@ -88,5 +177,4 @@
       "slug": "https://codepen.io/fazurrehman"
     }
   ]
-
 }

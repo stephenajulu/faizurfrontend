@@ -1,0 +1,20 @@
+{
+      "id": "product-3",
+      "image": "public/images/shop/grid-layout/cover.jpg",
+      "new": "New",
+      "offer": "Special offer",
+      "bestSelling": "Best Selling",
+      "category": "Design",
+      "title": "Grid Layout",
+      "describe": "4 unique grid systems for iPhone, iPad, Desktop, Dashboard and for responsive designs.",
+      "meta": "For figma",
+      "discountClass": "--has-no-discount",
+      "discount": "35% Off",
+      "offerPrice": "6$",
+      "originalPrice": "10$",
+      "tags": "--productNew --productOffer --productBestSelling",
+      "slug": "https://dribbble.com/fazurrehman/projects/2041240-Vencortex"
+    }
+
+
+<div class="productcard" id="product-3"><a href="#" class="Link-overlap">saS</a><div class="productcard__image"><div class="productcard__image-inner"><div class="productcard-image-container" style="transform: translate3d(0, 0px, 0px);"><img src="public/images/shop/grid-layout/cover.jpg" class="lazy image loaded" alt="Grid Layout - faizur"></div></div></div><div class="productcard__body"><div class="productcard-row productcard-tags"><div class="left --productNew --productOffer --productBestSelling"><span class="productcard-tag --new">New</span> <span class="productcard-tag --offer">Special offer</span> <span class="productcard-tag --bestSelling">Best Selling</span></div><div class="right"><span class="productcard-tag --category">Design</span></div></div><div class="productcard-row productcard-heading"><h2 class="productcard-title">Grid Layout</h2><p class="productcard-describe">4 unique grid systems for iPhone, iPad, Desktop, Dashboard and for responsive designs.</p></div><div class="productcard-row productcard-pricing"><span class="productcard-meta">For figma</span><div class="productcard-price --has-discount"><strong class="discount">35% Off</strong> <span class="original-price">10$</span> <strong class="offer-price">6$</strong></div></div></div></div>

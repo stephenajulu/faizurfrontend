@@ -16,7 +16,7 @@
 			"image1x": "public/images/work/avoreward/cover.jpg",
 			"image2x": "public/images/work/avoreward/cover-2x.jpg",
 			"alt": "faizur",
-			"slug": "https://dribbble.com/fazurrehman/projects/2041240-Vencortex"
+			"slug": "https://dribbble.com/fazurrehman/projects/2041236-AvoReward-App"
 		},
 		{
 			"id": "3",
@@ -25,7 +25,7 @@
 			"image1x": "public/images/work/faizur/cover.jpg",
 			"image2x": "public/images/work/faizur/cover.jpg",
 			"alt": "faizur",
-			"slug": "https://dribbble.com/fazurrehman/projects/2041240-Vencortex"
+			"slug": "https://dribbble.com/fazurrehman/projects/2041246-Faizur"
 		},
 		{
 			"id": "4",
@@ -34,7 +34,7 @@
 			"image1x": "public/images/work/taper/cover.jpg",
 			"image2x": "public/images/work/taper/cover-2x.jpg",
 			"alt": "faizur",
-			"slug": "https://dribbble.com/fazurrehman/projects/2041240-Vencortex"
+			"slug": "https://dribbble.com/fazurrehman/projects/4437042-Taper-App"
 		},
 		{
 			"id": "5",
@@ -43,7 +43,7 @@
 			"image1x": "public/images/work/futureproof/cover.jpg",
 			"image2x": "public/images/work/futureproof/cover.jpg",
 			"alt": "faizur",
-			"slug": "https://dribbble.com/fazurrehman/projects/2041240-Vencortex"
+			"slug": "https://dribbble.com/fazurrehman/projects/4634235-FutureProofer"
 		},
 		{
 			"id": "6",
@@ -52,7 +52,7 @@
 			"image1x": "public/images/work/moneymour/cover.jpg",
 			"image2x": "public/images/work/moneymour/cover-2x.jpg",
 			"alt": "faizur",
-			"slug": "https://dribbble.com/fazurrehman/projects/2041240-Vencortex"
+			"slug": "https://dribbble.com/fazurrehman/projects/720292-Money-App"
 		},
 		{
 			"id": "7",
@@ -61,7 +61,7 @@
 			"image1x": "public/images/work/twiddle/cover.jpgg",
 			"image2x": "public/images/work/twiddle/cover-2x.jpg",
 			"alt": "faizur",
-			"slug": "https://dribbble.com/fazurrehman/projects/2041240-Vencortex"
+			"slug": "https://dribbble.com/fazurrehman/projects/1035213-Twiddle-App"
 		},
 		{
 			"id": "8",
@@ -70,13 +70,13 @@
 			"image1x": "public/images/work/thewanderful/cover.jpgg",
 			"image2x": "public/images/work/thewanderful/cover-2x.jpg",
 			"alt": "faizur",
-			"slug": "https://dribbble.com/fazurrehman/projects/2041240-Vencortex"
+			"slug": "https://dribbble.com/fazurrehman/projects/1045873-Wanderful"
 		}
 	],
 	"products": [
 		{
 			"id": "product-1",
-			"image": "public/images/shop/grid-layout/cover.jpg",
+			"image": "public/shop/grid-layout/cover.jpg",
 			"new": "New",
 			"offer": "Special offer",
 			"bestSelling": "Best Selling",
@@ -87,60 +87,43 @@
 			"discountClass": "--has-no-discount",
 			"discount": "35% Off",
 			"offerPrice": "6$",
-			"originalPrice": "10$",
+			"originalPrice": "6$",
 			"tags": "--new --bestselling",
-			"slug": "https://dribbble.com/fazurrehman/projects/2041240-Vencortex"
+			"slug": "https://gumroad.com/l/qFMfc"
 		},
 		{
 			"id": "product-2",
-			"image": "public/images/shop/grid-layout/cover.jpg",
+			"image": "public/shop/project-folder/cover.jpg",
 			"new": "New",
 			"offer": "Special offer",
 			"bestSelling": "Best Selling",
 			"category": "Design",
-			"title": "Grid Layout",
-			"describe": "4 unique grid systems for iPhone, iPad, Desktop, Dashboard and for responsive designs.",
-			"meta": "For figma",
-			"discountClass": "--has-discount",
+			"title": "Project Folder Structure",
+			"describe": "A minimal folder structure designed for creative projects, that can be used anywhere in any type of design project.",
+			"meta": "Folder directory",
+			"discountClass": "--has-no-discount",
 			"discount": "35% Off",
-			"offerPrice": "6$",
-			"originalPrice": "10$",
+			"offerPrice": "5$",
+			"originalPrice": "5$",
 			"tags": "--new --bestselling",
-			"slug": "https://dribbble.com/fazurrehman/projects/2041240-Vencortex"
+			"slug": "https://gumroad.com/l/jgTgJ"
 		},
 		{
 			"id": "product-3",
-			"image": "public/images/shop/grid-layout/cover.jpg",
+			"image": "public/shop/comingsoon/cover.jpeg",
 			"new": "New",
 			"offer": "Special offer",
 			"bestSelling": "Best Selling",
-			"category": "Design",
-			"title": "Grid Layout",
-			"describe": "4 unique grid systems for iPhone, iPad, Desktop, Dashboard and for responsive designs.",
-			"meta": "For figma",
+			"category": "Template",
+			"title": "Coming Soon Minimal Template",
+			"describe": "Coming Soon This first most beautiful minimal coming soon templates Included 8+ beautiful multipurpose versions.",
+			"meta": "Website",
 			"discountClass": "--has-discount",
-			"discount": "35% Off",
-			"offerPrice": "6$",
-			"originalPrice": "10$",
+			"discount": "38% Off",
+			"offerPrice": "10$",
+			"originalPrice": "16$",
 			"tags": "--offer",
-			"slug": "https://dribbble.com/fazurrehman/projects/2041240-Vencortex"
-		},
-		{
-			"id": "product-3",
-			"image": "public/images/shop/grid-layout/cover.jpg",
-			"new": "New",
-			"offer": "Special offer",
-			"bestSelling": "Best Selling",
-			"category": "Design",
-			"title": "Grid Layout",
-			"describe": "4 unique grid systems for iPhone, iPad, Desktop, Dashboard and for responsive designs.",
-			"meta": "For figma",
-			"discountClass": "--has-discount",
-			"discount": "35% Off",
-			"offerPrice": "6$",
-			"originalPrice": "10$",
-			"tags": "--new --bestselling --offer",
-			"slug": "https://dribbble.com/fazurrehman/projects/2041240-Vencortex"
+			"slug": "https://gumroad.com/l/QWhbY"
 		}
 	],
 	"socialmedia": [

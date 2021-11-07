@@ -282,9 +282,8 @@ gulp.task('svgstore', function() {
 // copy assets
 gulp.task('copy-resources', function () {
   return mergeDir([
-    gulp.src(paths.root.public + 'images/**/*.{gif,jpg,png,svg,ico}').pipe(gulp.dest(paths.root.dist + 'public/images')),
-    gulp.src(paths.root.public + 'fonts/*').pipe(gulp.dest(paths.root.dist + 'public/fonts')),
-    gulp.src(paths.root.public + 'favicon/*').pipe(gulp.dest(paths.root.dist + 'public/favicon'))
+    gulp.src(paths.root.public + "/***/**/*").pipe(gulp.dest(paths.root.dist + 'public/')),
+
   ]);
 });
 
@@ -319,5 +318,14 @@ gulp.task(
 // build project
 gulp.task(
   'build',
-  gulp.series(gulp.parallel(['css', 'twig', 'css', 'svgstore', 'copy-resources']))
+  gulp.series(gulp.parallel([
+      'css',
+      'twig',
+      'css',
+      'svgstore',
+      'copy-resources',
+      'js-homepage',
+      'js-contact',
+      'js-global'
+  ]))
 );

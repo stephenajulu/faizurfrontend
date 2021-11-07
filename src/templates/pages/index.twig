@@ -12,4 +12,16 @@
 {% endblock %}
 {% block included_scripts %}
     <script src="js/home/bundle.js"></script>
+    <script>
+        $(window).on("scroll", function () {
+            if ($(window).scrollTop() > 600) {
+                $(".menu-btn__text").css("color", "#000");
+                $(".menu-btn__toggle span").css("background-color", "#000");
+            } else {
+                //remove the background property so it comes transparent again (defined in your css)
+                $(".menu-btn__text").css("color", "#fff");
+                $(".menu-btn__toggle span").css("background-color", "#fff");
+            }
+        });
+    </script>
 {% endblock %}

@@ -1,7 +1,7 @@
 // Menu hamburger + Magnet button
 // ================================================
 $("button.menu-btn__toggleBtn").click(function() {
-  $("html").toggleClass("-is-scroll-disable menu--dark");
+  $("html").toggleClass("-is-scroll-disable");
   $(".menu .menuNav").toggleClass("hidden");
   $(".menuPanel").toggleClass("menu-open");
   $(this).toggleClass("-active");

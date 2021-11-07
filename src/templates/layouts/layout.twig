@@ -6,8 +6,8 @@
 </head>
 
 <body class="{% if pageClass is defined %}{{ pageClass }}{% else %}{% endif %}" style="" data-scroll-container>
+{% include "../components/global/sidebar.twig" %}
   {% include "../components/global/menu.twig" %}
-  {% include "../components/global/sidebar.twig" %}
   <main role="main">
     {% block content %}
     {% endblock %}

@@ -132,7 +132,7 @@
 .c-jobs
   display: block
   .headline
-    max-width: 800px
+    max-width: 880px
     margin: 0 auto
 
 
@@ -140,9 +140,16 @@
   padding-top: var(--rowGapXXLarge)
   padding-bottom: var(--rowGapXLarge)
   text-align: center
+  position: relative
+  display: block
+  max-width: 960px
+  margin: 0 auto
   @include media('>=medium')
     padding-top: var(--rowGapXXXLarge)
     padding-bottom: var(--rowGapXXLarge)
+  .subhead
+    padding-top: var(--rowGapLarge)
+
 
 
 .c-jobs-grid-item
@@ -153,6 +160,7 @@
   border-bottom: 1px solid var(--color-black-100)
   @include media('>=medium')
     padding: calc(var(--rowGapXLarge) - 16px) 0
+
 
 
 .c-job-official

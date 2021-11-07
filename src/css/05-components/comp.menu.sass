@@ -37,9 +37,6 @@
     margin-left: 40px
     position: relative
     z-index: 2
-    &.hidden
-      opacity: 0
-      pointer-events: none
     @include media('<=medium')
       display: none
     &__list
@@ -253,75 +250,176 @@
       opacity: 0
 
 
-
-
-// Topbar
+// menuPanel
 //===================================
-.www-navigation-container
+.menuPanel
   position: fixed
   top: 0
   z-index: 998
   width: 100%
-  padding-left: 16px
-  padding-right: 16px
-  -webkit-transition: background-color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1)
-  -o-transition: background-color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1)
   transition: background-color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1)
-  background-color: transparent
+  background-color: #FFFFFF
   will-change: background-color
 
-  .www-navigation__desktop__menus
+  .menuPanel-modal
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 12
+    background: rgba(0, 0, 0, 0.1)
+    visibility: hidden
+
+  &__wrapper
     position: absolute
-    display: -webkit-box
-    display: -ms-flexbox
     display: flex
-    -webkit-box-pack: center
-    -ms-flex-pack: center
     justify-content: center
     width: 100%
     left: 0
     top: 0
-    z-index: 1
-    pointer-events: none
-    height: 620px
+    z-index: 999
 
-  .www-navigation__desktop__menus__top-offset
-    left: 0
-    width: 100%
-    height: 100%
-    position: absolute
-    overflow: hidden
-    background-color: #000
-    visibility: hidden
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0)
-    transition: visibility 0.35s step-end, -webkit-clip-path 0.35s cubic-bezier(0.165, 0.84, 0.44, 1)
-    -o-transition: clip-path 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), visibility 0.35s step-end
-    transition: clip-path 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), visibility 0.35s step-end
+    &-inner
+      left: 0
+      width: 100%
+      position: absolute
+      overflow: hidden
+      background-color: #FFFFFF
+      padding: 40px 0 60px 0
+      pointer-events: none
+      visibility: hidden
+      transform: translateY(-100%)
+      transition: transform .4s cubic-bezier(.165,.84,.44,1),visibility .6s step-end
+      //height: 600px
+      @include media('>medium')
+        padding: 120px 0
+
+
 
   &.menu-open
-    .www-navigation__desktop__menus__top-offset
+    .menuPanel__wrapper-inner
+      transition: transform .4s cubic-bezier(.165,.84,.44,1),visibility .6s step-start
+      transform: translateY(0)
+      opacity: 1
       visibility: visible
-      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
-      -webkit-transition: visibility 0.35s step-start, -webkit-clip-path 0.35s cubic-bezier(0.165, 0.84, 0.44, 1)
-      transition: visibility 0.35s step-start, -webkit-clip-path 0.35s cubic-bezier(0.165, 0.84, 0.44, 1)
-      -o-transition: clip-path 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), visibility 0.35s step-start
-      transition: clip-path 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), visibility 0.35s step-start
-      transition: clip-path 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), visibility 0.35s step-start, -webkit-clip-path 0.35s cubic-bezier(0.165, 0.84, 0.44, 1)
+      pointer-events: all
+
+    .menuPanel-modal
+      opacity: 1
+      visibility: inherit
+
+    .menuNav
+      opacity: 1
+      transform: translate3d(0, 0, 0)
+
+  // menuPanel container
+  //===================================
+  .menuPanel-container__row
+    @include media('>medium')
+      display: flex
+      justify-content: space-between
+
+  .menuPanel
+    &__primary
+      margin-bottom: 60px
+
+    &__primary,
+    &__secondary
+      @include media('>medium')
+        width: 50%
+
+    &__secondary
+      display: flex
+      @include media('>large')
+        width: 40%
 
 
-.www-navigation__desktop__menu
-  position: absolute
-  width: 100%
-  height: 100%
+  // primary nav
+  .menuNav.--primary
+    margin-left: -24px
+    .menuNav__list
+      @include media('>large')
+        display: flex
+        flex-wrap: wrap
+
+    .menuNav-item
+      will-change: opacity, transform
+      margin: 12px
+      @include media('>large')
+        width: calc(50% - 24px)
+
+    .linkHover
+      color: var(--color-black)
+      font-size: 28px
+      font-weight: var(--fontWeightRegular)
+      padding: 0 16px
+      @include media('>medium')
+        font-size: 36px
+      @include media('>largeX')
+        font-size: 40px
+
+
+  // --mics
+  .menuNav.--left
+    width: 50%
+    .menuNav-item:not(:last-child)
+      margin-bottom: var(--rowGapMedium)
+    h6
+      font-size: 14px
+      letter-spacing: -0.3px
+      font-weight: var(--fontWeightLight)
+      @include media('>large')
+        font-size: 1rem
+    a
+      color: var(--color-black)
+      font-size: 1rem
+      padding-top: var(--rowGapNormal) !important
+      font-weight: var(--fontWeightMedium)
+      @include media('>large')
+        font-size: 24px
+
+  // social media
+  .menuNav.--right
+    width: 40%
+    padding-left: 10%
+    .menuNav__list
+      margin-left: -8px
+    .linkHover
+      color: var(--color-black)
+      padding: 8px
+      //margin-bottom: 8px
+      font-size: 14px
+
+
+
+
+
+// menuPanel classes
+//===================================
+.menuPanel-logo
+  padding: 48px 0
+  margin-top: -120px
+  margin-bottom: 60px
+  display: none
+  @include media('>medium')
+    display: block
+  svg
+    height: 28px
+
+.menuPanel .menuNav
   opacity: 0
-  visibility: hidden
-  -webkit-transition: opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), visibility 0.6s step-end
-  -o-transition: opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), visibility 0.6s step-end
-  transition: opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), visibility 0.6s step-end
+  transition: transform 800ms cubic-bezier(.165,.84,.44,1), opacity 800ms ease-in-out
+  will-change: transform, opacity
+  transform: translate3d(0, 200px, 0)
 
-
-
+.menuPanel .comman-label
+  letter-spacing: 0.5px
+  font-weight: var(--fontWeightRegular)
+  font-size: 15px
+  text-transform: none
+  opacity: .6
+  margin-bottom: var(--rowGapMedium)
 
 // menu style
 //===================================
@@ -342,6 +440,19 @@
     background-color: var(--navLight)
 
 
+
+.-is-scroll-disable
+  body
+    overflow: hidden
+  main
+    pointer-events: none
+  .menu .menu__logo,
+  .menu .menuNav
+    opacity: 0!important
+    visibility: hidden!important
+    pointer-events: none!important
+  .menu-btn__text
+    display: none
 
 
 

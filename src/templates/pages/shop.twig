@@ -48,13 +48,17 @@
 {% endblock %}
 {% block included_scripts %}
     <script src="js/global/bundle.js"></script>
-
     <script>
         $(document).ready(function () {
             initWordAnimation();
         });
         $('.productcard .--has-no-discount .discount').text('');
         $('.productcard  .--has-no-discount .offer-price').text('');
+    </script>
+
+    <script>
+        var firstHeight = $(".navbarMenu__top").height() + 'px';
+        $(".navbarMenu__top").css("height", firstHeight);
     </script>
 
 

@@ -3,7 +3,7 @@
 $("button.menu-btn__toggleBtn").click(function() {
   $("html").toggleClass("-is-scroll-disable menu--dark");
   $(".menu .menuNav").toggleClass("hidden");
-  $(".navbarMenu").toggleClass("menu-open");
+  $(".menuPanel").toggleClass("menu-open");
   $(this).toggleClass("-active");
 });
 

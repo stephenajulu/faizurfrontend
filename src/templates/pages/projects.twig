@@ -31,5 +31,28 @@
 {% endblock %}
 {% block included_scripts %}
     <script src="js/global/bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"
+            integrity="sha512-CPA5LMoJI/a5HkSIAKcBtFXe4gqGjPUL2ExF/3PmhrrHI17wod9xOqqF+0WZQRKIIq0KwF8oG5BaiWobtrke3A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const boxes = gsap.utils.toArray('.workShowcase--work .workShowcase__item');
+        // Set things up
+        gsap.set(boxes, {autoAlpha: 0, y: 50});
+        boxes.forEach((box, i) => {
+          // Set up your animation
+          const anim = gsap.to(box, {duration: 0.2, autoAlpha: 1, y: 0, paused: true, delay: 0.1});
+          // Use callbacks to control the state of the animation
+          ScrollTrigger.create({
+            trigger: box,
+            end: "bottom bottom",
+            once: true,
+            onEnter: self => {
+              // If it's scrolled past, set the state
+              // If it's scrolled to, play it
+              self.progress === 1 ? anim.progress(1) : anim.play()
+            }
+          });
+        });
+    </script>
 
 {% endblock %}

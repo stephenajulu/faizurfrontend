@@ -12,6 +12,16 @@ $sal-slide-offset: 20% !default;
 $sal-zoom-in-scale: 0.5 !default;
 $sal-zoom-out-scale: 1.1 !default;
 $sal-flip-rotate: 91deg !default;
+/**
+ * Settings
+ */
+
+$sal-animation-duration: 0.2s !default;
+$sal-animation-delay: 0s !default;
+$sal-slide-offset: 20% !default;
+$sal-zoom-in-scale: 0.5 !default;
+$sal-zoom-out-scale: 1.1 !default;
+$sal-flip-rotate: 91deg !default;
 
 /**
  * Easings
@@ -86,7 +96,6 @@ $sal-easings: (
     transition-timing-function: $value;
   }
 }
-
 
 /**
  * Animations

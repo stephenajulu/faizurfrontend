@@ -2,7 +2,7 @@
     <div class="c-featuredProjects-content">
         <div class="c-featuredProjects-container">
 
-            <div class="c-featuredProjects-top">
+            <div class="c-featuredProjects-top" data-sal="header">
                 <h2 class="headline h3 fontWeightMedium">featured <span class="textOutline">projects</span></h2>
                 <span class="subhead-caption" style="letter-spacing: 0">Scroll down for more</span>
             </div>
@@ -13,12 +13,16 @@
                                 <div class="workShowcase__split-cols --left">
 
                                     {% for project in projects|slice(0, 3)|sort %}
+                                        <div class="work-preview">
                                         {% include "../../components/molecules/projectcard.twig" %}
+                                        </div>
                                     {% endfor %}
                                 </div>
                                 <div class="workShowcase__split-cols --right">
                                     {% for project in projects|slice(-5,3)|sort %}
+                                        <div class="work-preview">
                                         {% include "../../components/molecules/projectcard.twig" %}
+                                        </div>
                                     {% endfor %}
                                 </div>
                             </div>

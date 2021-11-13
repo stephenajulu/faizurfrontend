@@ -73,3 +73,7 @@ function initWordAnimation() {
     changeWord();
     setInterval(changeWord, 2500);
 }
+
+$( document ).ready(function() {
+    sal();
+});

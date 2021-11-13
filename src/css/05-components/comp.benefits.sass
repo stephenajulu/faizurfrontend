@@ -16,7 +16,8 @@
     line-height: 1
     display: block
   &__subhead
-    max-width: calc(50em * 0.5)
-    padding-right: var(--columnPaddingLarge)
     margin-bottom: var(--rowGapXXLarge)
     font-size: 18px
+    @include media('>=medium')
+      max-width: calc(50em * 0.5)
+      padding-right: var(--columnPaddingLarge)

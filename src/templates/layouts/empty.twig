@@ -2,11 +2,9 @@
 <html lang="eng">
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="css/globals.min.css">
 </head>
 
-<body class="faizur-homepage faizur">
+<body class="{% if pageClass is defined %}{{ pageClass }}{% else %}{% endif %}" style="" data-scroll-container>
   <main role="main" class="app-content">
     {% block content %}
   </main>

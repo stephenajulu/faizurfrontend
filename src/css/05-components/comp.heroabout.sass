@@ -16,7 +16,7 @@
 
 //.c-heroAboutImage-wrapper
 .c-heroAboutWrapper
-  padding-top: 108px
+  padding-top: 80px
   @include media('>=medium')
     padding-top: 128px
 
@@ -192,7 +192,8 @@
 .c-heroAbout-breif
   position: relative
   p
-    max-width: 70%
     font-weight: var(--fontWeightMedium)
+    @include media('>=medium')
+      max-width: 70%
     @include media('<=mobile')
       font-size: calc(32px * var(--scale))

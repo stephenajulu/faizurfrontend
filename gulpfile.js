@@ -57,6 +57,7 @@ const paths = {
     greenSockGsap: 'src/js/vendors/gsap.min.js',
     slickCarousel: 'node_modules/slick-carousel/slick/slick.js',
     marqueeJs: 'node_modules/jquery.marquee/jquery.marquee.js',
+    salJs: 'node_modules/sal.js/dist/sal.js',
 
     // Common holding Lazyload, Image loading
     common: 'src/js/global.js',
@@ -152,6 +153,7 @@ gulp.task('js-homepage', () => {
         paths.lib.greenSockGsap,
         paths.lib.slickCarousel,
         paths.lib.marqueeJs,
+        paths.lib.salJs,
         paths.lib.common,
         paths.root.js + "menu.js",
         paths.root.js + "homepage.js",

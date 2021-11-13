@@ -14,6 +14,7 @@
 @import "03-elements/elements.icon";
 @import "03-elements/elements.image";
 @import "03-elements/elements.form";
+@import "03-elements/elements.animation";
 
 // components
 @import "05-components/comp.menu";
@@ -42,7 +43,7 @@
 @import "06-utilities/utilities";
 
 // layouts
-@import "src/css/07-layouts/layout.sass";
+@import "src/css/07-layouts/layout";
 
 
 

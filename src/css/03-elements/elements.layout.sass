@@ -25,7 +25,8 @@ $comp: ".c"
   &-social-container,
   &-contact-container,
   &-shop-container,
-  &-menuPanel-container
+  &-menuPanel-container,
+  &-masterclass-container
     max-width: var(--layoutWidthMax)
     margin: 0 auto
     padding-left: 5%
@@ -98,6 +99,8 @@ $comp: ".c"
     .headline
       font-weight: var(--fontWeightBold)
       letter-spacing: -1px
+      @include media('>=medium')
+        letter-spacing: -1px
       @include media('>=large')
         letter-spacing: -3px
 
@@ -135,6 +138,11 @@ $comp: ".c"
         right: 0
         margin: 0 auto
         height: 160px
+
+  &-featuredProjects-top
+    padding-bottom: var(--rowGapLarge)
+    @include media('>=large')
+      padding-bottom: var(--rowGapXXLarge)
 
 
   &-inside-top,

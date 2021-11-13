@@ -1,4 +1,5 @@
 {% extends "../layouts/layout.twig" %}
+{% set pageTitle = "What's New - Faizur Rehman" %}
 {% set pageClass = "whatsnew  menu--dark" %}
 {% set page = 'whatsnew' %}
 {% block content %}
@@ -44,10 +45,8 @@
             space: 'qk92r3yjulwl',
             accessToken: 'DWeOmnjOzLhcdoaQkzXqiwG5QJR_0tIbWvJK2lHz9Lk',
         })
-
         var project_CONTENT_TYPE_ID = 'whatsnew'
         var container = document.getElementById('content')
-
         contentfulClient.getEntries({
             'content_type': project_CONTENT_TYPE_ID,
             'order': '-sys.createdAt'
@@ -62,7 +61,6 @@
         function renderProducts(project) {
             return project.map(renderSingleProject).join('\n')
         }
-
         function renderSingleProject(project) {
             var fields = project.fields
             var title = project.fields.title
@@ -81,8 +79,6 @@
             '  </div>'+
             '</div>'
         }
-
-
         function renderImage(image) {
             if (image && image.fields.file) {
                 return '<img class="image lazy" alt="faizur" src="' + image.fields.file.url + '"  />'
@@ -90,8 +86,6 @@
                 return ''
             }
         }
-
-
     </script>
 
 {% endblock %}

@@ -6,6 +6,9 @@
   &-item
     position: relative
     width: calc(50% - 16px)
+    height: 160px
+    border-radius: 24px
+    overflow: hidden
     margin: var(--rowGapNormal)
     display: inline-block
     @include media('>=small')
@@ -13,6 +16,7 @@
       width: calc(50% - 16px)
     @include media('>=medium')
       width: calc(33.33% - 16px)
+      height: 200px
     @include media('>=large')
       width: calc(25% - 16px)
 
@@ -20,15 +24,13 @@
 
 .c-clients-block
   background-color: #181818
-  height: 200px
-  width: 100%
   display: flex
   align-items: center
   justify-content: center
-  border-radius: 12px
   overflow: hidden
   position: relative
   transition: all 400ms cubic-bezier(.455,.03,.515,.955)
+  height: 100%
   &:before
     display: block
     width: 250%
@@ -41,11 +43,29 @@
     opacity: 1
     transition: all 400ms cubic-bezier(.455,.03,.515,.955)
     content: ""
+
+  &.--logo
+    &-2
+      .c-clients-block__logo
+        transform: scale(1.8)
+        @include media('>=medium')
+          transform: scale(1.5)
+    &-5
+      .c-clients-block__logo
+        transform: scale(1.2)
+    &-10
+      .c-clients-block__logo
+        transform: scale(0.8)
+
+
+
+
   &:hover
     &:before
       transform: translate(-50%, 50%) scale(1)
     .c-clients-block__text
       transform: translate3d(0, 0, 0)
+      font-size: 14px!important
     .c-clients-block__logo
       transform: translate3d(0, -24px, 0)
 
@@ -96,13 +116,21 @@
       &:before
         background-color: #611997
 
+
+
   &__logo
+    width: 100%
+    max-width: 140px
     position: relative
     transform: translate3d(0, 0, 0)
     transition: transform 300ms cubic-bezier(.455,.03,.515,.955)
-    @include media('<=small')
-      width: 100px
-      height: 100px
+    @include media('>=medium')
+      max-width: 180px
+    &__inner
+      position: relative
+      padding-bottom: 20%
+      height: 0
+      overflow: hidden
       img
         position: absolute
         top: 0
@@ -111,6 +139,7 @@
         height: 100%
         object-fit: contain
         transition: opacity 300ms ease-in
+
 
 
   &__text
@@ -191,3 +220,5 @@
     display: block
     @extend .meta
     opacity: 0.6
+    font-weight: var(--fontWeightRegular)
+    letter-spacing: 0.3px

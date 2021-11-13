@@ -153,7 +153,9 @@ body.sal-disabled [data-sal|='project'] {
     transform: translateY(0);
 }
 
-
+[data-sal='slide-up'] {
+  transform: translateY($sal-slide-offset);
+}
 
 
 

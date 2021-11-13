@@ -27,7 +27,7 @@
         });
     </script>
     <script>
-            const boxes = gsap.utils.toArray('.work-preview');
+            const boxes = gsap.utils.toArray('.work-preview, .cTestimonials-bg__inner');
             // Set things up
             gsap.set(boxes, {autoAlpha: 0, y: 100});
             boxes.forEach((box, i) => {
@@ -46,4 +46,6 @@
               });
             });
         </script>
+
+
 {% endblock %}

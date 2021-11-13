@@ -29,8 +29,32 @@
             end: () => "+=" + container.offsetWidth
           }
         })
-
-
     </script>
+
+    <script>
+            const boxes = gsap.utils.toArray('' +
+                '.c-inside .wrapper-image-item,' +
+                '.c-jobs-grid-item,' +
+                '.c-aboutbreif-grid,' +
+                '.c-heroAbout-breif');
+            // Set things up
+            gsap.set(boxes, {autoAlpha: 0, y: 100});
+            boxes.forEach((box, i) => {
+              // Set up your animation
+              const anim = gsap.to(box, {duration: 0.3, autoAlpha: 1, y: 0, paused: true, delay: 0.3});
+              // Use callbacks to control the state of the animation
+              ScrollTrigger.create({
+                trigger: box,
+                end: "bottom bottom",
+                once: true,
+                onEnter: self => {
+                  // If it's scrolled past, set the state
+                  // If it's scrolled to, play it
+                  self.progress === 1 ? anim.progress(1) : anim.play()
+                }
+              });
+            });
+        </script>
+
 
 {% endblock %}

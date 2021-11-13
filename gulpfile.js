@@ -193,6 +193,7 @@ gulp.task('js-global', () => {
         paths.lib.lazySizesFit,
         paths.lib.greenSockGsap,
         paths.lib.marqueeJs,
+        paths.lib.salJs,
         paths.lib.common,
         paths.root.js + "menu.js",
     ])
@@ -231,6 +232,7 @@ gulp.task('js-contact', () => {
         paths.lib.greenSockGsap,
         paths.lib.marqueeJs,
         paths.lib.common,
+        paths.lib.salJs,
         paths.root.js + "menu.js",
         paths.root.js + "contact.js",
     ])

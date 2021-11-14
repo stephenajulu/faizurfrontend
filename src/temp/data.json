@@ -47,7 +47,7 @@
 		},
 		{
 			"id": "6",
-			"title": "MoneyMore",
+			"title": "MoneyMour",
 			"text": "Designing app for payment method providing instant loans for online purchases.",
 			"image1x": "public/images/work/moneymour/cover.jpg",
 			"image2x": "public/images/work/moneymour/cover-2x.jpg",
@@ -126,38 +126,16 @@
 			"slug": "https://gumroad.com/l/QWhbY"
 		}
 	],
-	"socialmedia": [
-		{
-			"platform": "Instagram",
-			"slug": "https://www.instagram.com/fazurrehman/"
-		},
-		{
-			"platform": "Youtube",
-			"slug": "https://www.youtube.com/channel/UCQR7vuOpqGq1MmY4HHvlTyw?sub_confirmation=1"
-		},
-		{
-			"platform": "Dribbble",
-			"slug": "https://dribbble.com/fazurrehman"
-		},
-		{
-			"platform": "Linkedin",
-			"slug": "https://www.linkedin.com/in/fazurrehman/"
-		},
-		{
-			"platform": "Medium",
-			"slug": "https://medium.com/@fazurrehman"
-		},
-		{
-			"platform": "Behance",
-			"slug": "https://www.behance.net/fazurrehman"
-		},
-		{
-			"platform": "Twitter",
-			"slug": "https://twitter.com/fazurrehman"
-		},
-		{
-			"platform": "Codepen",
-			"slug": "https://codepen.io/fazurrehman"
-		}
-	]
+	"link": {
+		"instagram": "https://www.instagram.com/fazurrehman/",
+		"youtube": "https://www.youtube.com/channel/UCQR7vuOpqGq1MmY4HHvlTyw?sub_confirmation=1",
+		"dribbble": "https://dribbble.com/fazurrehman",
+		"linkedin": "https://www.linkedin.com/in/fazurrehman/",
+		"blog": "https://medium.com/@fazurrehman",
+		"behance": "https://www.behance.net/fazurrehman",
+		"twitter": "https://twitter.com/fazurrehman",
+		"codepen": "https://codepen.io/fazurrehman",
+		"unsplash": "https://unsplash.com/@fazurrehman",
+		"appointment": "https://faizur.gumroad.com/l/bbxFSd"
+	}
 }

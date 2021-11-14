@@ -10,6 +10,16 @@
   min-height: 400px
   overflow: hidden
   opacity: 0.6
+  &::before
+    position: absolute
+    width: 100%
+    min-height: 400px
+    top: 0
+    left: 0
+    background: linear-gradient(0deg, rgba(19,19,19,1) 0%, rgba(19,19,19,0) 40%)
+    content: ""
+    @include media('>=medium')
+      min-height: 600px
   @include media('>=medium')
     min-height: 600px
   .c-whatsnew-header-bg
@@ -27,7 +37,7 @@
   padding: var(--rowGapXLarge) 0
   display: block
   @include media('>=medium')
-    padding: calc(var(--rowGapMedium)) 0 var(--rowGapXXLarge) 0
+    padding: calc(var(--rowGapLarge)) 0 var(--rowGapXXXLarge) 0
 
 
 
